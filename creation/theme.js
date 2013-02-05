@@ -189,9 +189,7 @@ createTheme = function(whichObj){
 
 /*
 
-FUNCTIONS TO IMPLEMENT
-
-getPlanetType(whichObj)
+PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET 
 
 */
 
@@ -238,7 +236,7 @@ function getPlanetMaterial(whichObj){
 
 function getPlanetPosition(whichObj){
 	if(whichObj.theme == 'egg'){
-		whichObj.planets.position = planetLib.position.center()	
+		whichObj.planets.position = planetLib.randomPosition(whichObj.radius/4,whichObj.planets.numOf)
 	}
 }
 
@@ -251,9 +249,32 @@ function getPlanetRotation(whichObj){
 }
 
 
+planetLib.randomPosition = function(size,numOf,possible){
+	
+	var array = [
+		planetLib.position.center(),
+		planetLib.position.boxRand(size),
+		planetLib.position.fullCircle(size,numOf),
+		planetLib.position.fullSphere(size,numOf),
+		planetLib.position.loopDLoop(size,numOf),
+		planetLib.position.lineX(size,numOf)
+	]
+	var randomType 
+	if(possible){
+		randomType = possible[Math.floor((Math.random()*possible.length))]
+	}else{
+		randomType = Math.floor(Math.random()*9)
+	}
+	
+	var toReturn = array[randomType]
+	
+	return toReturn
+}
+
+
 /*
 
-SUN FUNCTIONS
+SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN SUN 
 
 */
 function getSunType(whichObj){
@@ -266,7 +287,7 @@ function getSunType(whichObj){
 }
 
 function getSunMaterial(whichObj){
-	if(whichObj.theme == 'egg'){
+	//if(whichObj.theme == 'egg'){
 		var materialRandom = Math.floor((Math.random()*2))
 		if(materialRandom == 1){
 			whichObj.suns.material = planetLib.material.colorNormal(whichObj.color)
@@ -281,7 +302,7 @@ function getSunMaterial(whichObj){
 			  
 		}
 		
-	}
+	//}
 	
 }
 
@@ -308,43 +329,47 @@ function getSunRotation(whichObj){
 
 
 
+/*
 
+	DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST DUST 
+
+
+*/
 
 
 function getPNum(whichObj){
-	if(whichObj.theme == 'egg'){
-		whichObj.dust.pNum =Math.ceil(Math.random()*100) +50
-	}
+	//if(whichObj.theme == 'egg'){	}
+	whichObj.dust.pNum =Math.ceil(Math.random()*100) +50
+
 }
 
 function getFNum(whichObj){
-	if(whichObj.theme == 'egg'){
-		whichObj.dust.fNum =Math.ceil(Math.random()*20) +10
-	}
+	//if(whichObj.theme == 'egg'){}
+	whichObj.dust.fNum =Math.ceil(Math.random()*20) +10
+	
 }
 
 function getPPosition(whichObj){
-	if(whichObj.theme == 'egg'){
-		whichObj.dust.pPosition = dustLib.randomPPosition(whichObj.radius/4,whichObj.dust.pNum,[0,1,3,4,7])	
-	}	
+	//if(whichObj.theme == 'egg'){}	
+	whichObj.dust.pPosition = dustLib.randomPPosition(whichObj.radius/4,whichObj.dust.pNum,[0,1,3,4,7])	
+	
 }
 
 function getPMaterial(whichObj){
-	if(whichObj.theme == 'egg'){	
-		whichObj.dust.pMaterial =  dustLib.pMaterial.colorAdditive(whichObj.color, whichObj.radius/1000)
-	}
+	whichObj.dust.pMaterial =  dustLib.randomPMaterial(whichObj.radius/1000, whichObj.color,whichObj.img)
+	//if(whichObj.theme == 'egg'){	}
 }
 
 function getFPosition(whichObj){
-	if(whichObj.theme == 'egg'){	
-		whichObj.dust.fPosition = dustLib.randomFPosition(whichObj.radius/2,whichObj.dust.fNum,[0,1,3,4,5])
-	}
+	//if(whichObj.theme == 'egg'){		}
+	whichObj.dust.fPosition = dustLib.randomFPosition(whichObj.radius/2,whichObj.dust.fNum,[0,1,3,4,5])
+
 }
 
 function getFRotation(whichObj){
-	if(whichObj.theme == 'egg'){
-		whichObj.dust.fRotation = dustLib.fRotation.noRotation()
-	}
+	if(whichObj.theme == 'egg'){}
+	whichObj.dust.fRotation = dustLib.randomFRotation(whichObj.dust.fNum,Math.random()*Math.PI*2)
+	
 }
 
 
@@ -393,6 +418,50 @@ dustLib.randomFPosition = function(size,numOf,possible){
 		randomType = possible[Math.floor((Math.random()*possible.length))]
 	}else{
 		randomType = Math.floor(Math.random()*7)
+	}
+	
+	var toReturn = array[randomType]
+	
+	return toReturn
+
+}
+
+dustLib.randomPMaterial = function(size,color,img,possible){
+	
+	var array = [
+		dustLib.pMaterial.color(color,size),
+		dustLib.pMaterial.colorAdditive(color,size),
+		dustLib.pMaterial.img(img,size),
+		dustLib.pMaterial.imgAdditive(img,size),
+	]
+	
+	var randomType 
+	if(possible){
+		randomType = possible[Math.floor((Math.random()*possible.length))]
+	}else{
+		randomType = Math.floor(Math.random()*4)
+	}
+	
+	var toReturn = array[randomType]
+	
+	return toReturn
+
+}
+
+dustLib.randomFRotation = function(numOf,degree,possible){
+	
+	var array = [
+		dustLib.fRotation.noRotation(),
+		dustLib.fRotation.xyRot(degree),
+		dustLib.fRotation.rotX(degree,numOf),
+		
+	]
+	
+	var randomType 
+	if(possible){
+		randomType = possible[Math.floor((Math.random()*possible.length))]
+	}else{
+		randomType = Math.floor(Math.random()*3)
 	}
 	
 	var toReturn = array[randomType]
