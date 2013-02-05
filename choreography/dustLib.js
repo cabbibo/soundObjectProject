@@ -188,7 +188,7 @@ var dustLib= {
 		jaggedLineX:function(size){
 			
 			var functionToReturn=function(n){
-					var x = Math.random()*size
+					var x = Math.random()*size-(size/2)
 					var y = Math.random()*(size/10)-(size/20)
 					var z = Math.random()*(size/10)-(size/20)
 					var toReturn = {
@@ -238,6 +238,26 @@ var dustLib= {
 			
 		},
 		
+		sphere:function(size){
+			
+			var functionToReturn=function(n){
+					var pos = cabMATH.toCart(size,(2*Math.PI*Math.random()),(-Math.PI*(2*Math.PI*Math.random())))
+					var x = pos.x
+					var y = pos.y
+					var z = pos.z
+					var toReturn = {
+						x:x,
+						y:y,
+						z:z	
+					}
+					return toReturn
+				}
+				
+			return functionToReturn
+			
+		},
+		
+		
 		chipX:function(size){
 			
 			var functionToReturn=function(n){
@@ -263,10 +283,26 @@ var dustLib= {
 	
 	//FIELD POSITIONING FUNCITONS
 	fPosition:{
+		lineThroughX:function(size){
+			
+				var functionToReturn = function(n){
+					var x = Math.random()*size - size/2
+					var y = 0
+					var z = 0
+					var toReturn = {
+						x:x,
+						y:y,
+						z:z	
+					}
+					return toReturn
+				}
+				
+				return functionToReturn
+		},
 		straightLine:function(size){
 			
 				var functionToReturn = function(n){
-					var x = -n*size
+					var x = n*size 
 					var y = 0
 					var z = 0
 					var toReturn = {
@@ -316,6 +352,26 @@ var dustLib= {
 			
 		},
 		
+		sphere:function(size){
+			
+			var functionToReturn=function(n){
+					var pos = cabMATH.toCart(size,(2*Math.PI*Math.random()),(-Math.PI*(2*Math.PI*Math.random())))
+					var x = pos.x
+					var y = pos.y
+					var z = pos.z
+					var toReturn = {
+						x:x,
+						y:y,
+						z:z	
+					}
+					return toReturn
+				}
+				
+			return functionToReturn
+			
+		},
+		
+		
 		center:function(){
 			var functionToReturn = function(n){
 					var x = 0
@@ -330,6 +386,24 @@ var dustLib= {
 				}
 				
 				return functionToReturn
+			
+		},
+		
+		jaggedLineX:function(size){
+			
+			var functionToReturn=function(n){
+					var x = Math.random()*size-(size/2)
+					var y = Math.random()*(size/10)-(size/20)
+					var z = Math.random()*(size/10)-(size/20)
+					var toReturn = {
+						x:x,
+						y:y,
+						z:z	
+					}
+					return toReturn
+				}
+				
+			return functionToReturn
 			
 		},
 		
@@ -498,9 +572,9 @@ var dustLib= {
 		},
 		
 		size:{
-			freq:function(whichSoundObj,freqData,binCount,n){return(freqData/100+10)},
-			freqLarge:function(whichSoundObj,freqData,binCount,n){return(freqData/20+40)},
-			freqNone:function(whichSoundObj,freqData,binCount,n){return(freqData/100+1)},
+			freq:function(whichSoundObj,freqData,binCount,n){return((freqData/100+10)*(whichSoundObj.radius/2000))},
+			freqLarge:function(whichSoundObj,freqData,binCount,n){return((freqData/20+40)*(whichSoundObj.radius/6000))},
+			freqNone:function(whichSoundObj,freqData,binCount,n){return((freqData/100+1)*(whichSoundObj.radius/2000))},
 		},
 		
 	},

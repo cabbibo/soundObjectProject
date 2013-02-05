@@ -179,7 +179,7 @@ createTheme = function(whichObj){
 		}
 		
 		if (!whichObj.sections[0].dust){
-			randomVis = dustLib.randomVis()
+			randomVis = dustLib.randomVis({scale:[0,2]})
 			whichObj.sections[0].dust = randomVis
 		}
 		
@@ -306,6 +306,11 @@ function getSunRotation(whichObj){
 }
 
 
+
+
+
+
+
 function getPNum(whichObj){
 	if(whichObj.theme == 'egg'){
 		whichObj.dust.pNum =Math.ceil(Math.random()*100) +50
@@ -320,19 +325,19 @@ function getFNum(whichObj){
 
 function getPPosition(whichObj){
 	if(whichObj.theme == 'egg'){
-		whichObj.dust.pPosition = dustLib.pPosition.randomBox(whichObj.radius/10)	
+		whichObj.dust.pPosition = dustLib.randomPPosition(whichObj.radius/4,whichObj.dust.pNum,[0,1,3,4,7])	
 	}	
 }
 
 function getPMaterial(whichObj){
 	if(whichObj.theme == 'egg'){	
-		whichObj.dust.pMaterial =  dustLib.pMaterial.color(whichObj.color,whichObj.radius/1000)
+		whichObj.dust.pMaterial =  dustLib.pMaterial.colorAdditive(whichObj.color, whichObj.radius/1000)
 	}
 }
 
 function getFPosition(whichObj){
 	if(whichObj.theme == 'egg'){	
-		whichObj.dust.fPosition = dustLib.fPosition.randomBox(whichObj.radius/2)
+		whichObj.dust.fPosition = dustLib.randomFPosition(whichObj.radius/2,whichObj.dust.fNum,[0,1,3,4,5])
 	}
 }
 
@@ -341,6 +346,62 @@ function getFRotation(whichObj){
 		whichObj.dust.fRotation = dustLib.fRotation.noRotation()
 	}
 }
+
+
+
+
+dustLib.randomPPosition = function(size,numOf,possible){
+	
+	var array = [
+		dustLib.pPosition.randomBox(size),
+		dustLib.pPosition.lineThroughX(size),
+		dustLib.pPosition.lineX(size),
+		dustLib.pPosition.ringX(size,numOf),
+		dustLib.pPosition.jaggedLineX(size),
+		dustLib.pPosition.nDependX(size),
+		dustLib.pPosition.nJaggedDependX(size),
+		dustLib.pPosition.chipX(size),
+		dustLib.pPosition.sphere(size)
+	]
+	var randomType 
+	if(possible){
+		randomType = possible[Math.floor((Math.random()*possible.length))]
+	}else{
+		randomType = Math.floor(Math.random()*9)
+	}
+	
+	var toReturn = array[randomType]
+	
+	return toReturn
+
+}
+
+dustLib.randomFPosition = function(size,numOf,possible){
+	
+	var array = [
+		dustLib.fPosition.randomBox(size),
+		dustLib.fPosition.lineThroughX(size),
+		dustLib.fPosition.straightLine(size),
+		dustLib.fPosition.ringX(size,numOf),
+		dustLib.fPosition.jaggedLineX(size),
+		dustLib.fPosition.center(),
+		dustLib.fPosition.sphere(size)
+	]
+	
+	var randomType 
+	if(possible){
+		randomType = possible[Math.floor((Math.random()*possible.length))]
+	}else{
+		randomType = Math.floor(Math.random()*7)
+	}
+	
+	var toReturn = array[randomType]
+	
+	return toReturn
+
+}
+
+
 /*
 	dust:{
 					pNum:200,
@@ -359,7 +420,11 @@ function getFRotation(whichObj){
 
 
 
+/* 
 
+	Have to set up this one up special so that the type and dataType are different geometries
+	
+*/
 
 planetLib.randomType =  function(size,possible) {
 	
