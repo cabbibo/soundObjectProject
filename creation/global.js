@@ -338,7 +338,7 @@ window.gain =  music.createGainNode();
 //adding this for now so that I can work without having to listen to music
 //TAKE OUT FOR PRODUCTION
 window.TESTGAIN = music.createGainNode();
-TESTGAIN.gain.value = .0008
+TESTGAIN.gain.value = .8
 
 //gain will be used to fade  musically in and out of sections
 gain.connect(TESTGAIN)

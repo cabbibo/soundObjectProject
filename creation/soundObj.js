@@ -79,7 +79,7 @@ SOUNDOBJ.prototype = {
 	
 	//function to be called when are is entered
 	enter:function(whichObj){
-		console.log(whichObj)
+		console.log(whichObj.scene.children.length)
 		var newObj = this
 		
 		if(whichObj){
@@ -225,6 +225,8 @@ SOUNDOBJ.prototype = {
 	
 	checkEnter:function(){
 		this.getPosToCamera()
+		/*
+		
 		
 		//this will be the area where the other objects in the field will fade out
 		if(this.posToCamera.d < (this.radius +this.radius/2)){
@@ -252,9 +254,9 @@ SOUNDOBJ.prototype = {
 						
 						if(this.parent.children[i] != this){
 							var obj = this.parent.children[i]
-							obj.scene.scale.x = opacity
-							obj.scene.scale.y = opacity
-							obj.scene.scale.z = opacity
+							obj.scene.scale.x = opacity+0.001
+							obj.scene.scale.y = opacity+0.001
+							obj.scene.scale.z = opacity+0.001
 						
 						}
 					}
@@ -267,6 +269,7 @@ SOUNDOBJ.prototype = {
 			
 			
 		}
+		*/
 		
 		if(this.posToCamera.d < this.radius){
 			this.enter(this)	
@@ -275,7 +278,7 @@ SOUNDOBJ.prototype = {
 	
 	checkExit:function(){
 		
-		
+		/*
 		if(this.posToCamera.d > this.radius-(this.radius/4)){
 			var opacity = (this.radius-this.posToCamera.d)/(this.radius/4)
 			
@@ -283,16 +286,16 @@ SOUNDOBJ.prototype = {
 				for(var i = 0; i <this.children.length ; i++){
 					var obj = this.children[i]
 					
-					this.children[i].scene.scale.x = opacity
-					this.children[i].scene.scale.y = opacity
-					this.children[i].scene.scale.z = opacity
+					this.children[i].scene.scale.x = opacity+0.001
+					this.children[i].scene.scale.y = opacity+0.001
+					this.children[i].scene.scale.z = opacity+0.001
 					
 				}
 			}
 			
 			gain.gain.value = 0.5 * opacity
 		}
-		
+		*/
 		
 		
 		if(this.posToCamera.d > this.radius){
@@ -374,9 +377,9 @@ SOUNDOBJ.prototype = {
 			
 			//hacking a bit, so you don't arrive right in the center,
 			//may not be neccesary though..
-			var newX= self.globalPos.x + ((Math.random()*self.radius)/20 - self.radius/40)
-			var newY= self.globalPos.y + ((Math.random()*self.radius)/20 - self.radius/40)
-			var newZ= self.globalPos.z + ((Math.random()*self.radius)/20 - self.radius/40)
+			var newX= self.globalPos.x //+ ((Math.random()*self.radius)/20 - self.radius/40)
+			var newY= self.globalPos.y //+ ((Math.random()*self.radius)/20 - self.radius/40)
+			var newZ= self.globalPos.z //+ ((Math.random()*self.radius)/20 - self.radius/40)
 		
 			var functionToReturn = "moveToLocation("+newX+","+newY+","+newZ+")"
 		
@@ -465,6 +468,19 @@ SOUNDOBJ.prototype = {
 			scene.add(this.scene)
 		}
 		
+		
+		/*
+		TESTING SQUARE TO CHECK CENTER OF EACH SCENE
+		
+	
+		var centerSquare = new THREE.Mesh(
+			new THREE.CubeGeometry(this.params.radius/100,this.params.radius/100,this.params.radius/100),
+			new THREE.MeshNormalMaterial({side:THREE.DoubleSide})
+		)
+		this.scene.add(centerSquare)
+		
+		*/
+		
 		//This will be boolean we will use to figure out if 
 		//objects are part of the scene or not (used so that objects will not be 'readded')
 		this.alive = false
@@ -472,6 +488,11 @@ SOUNDOBJ.prototype = {
 		this.radius = this.params.radius
 		
 		//gets global position
+		/*
+		var copyPosition = new THREE.Vector3(this.params.position.x,this.params.position.y,this.params.position.z)
+	
+		copyPosition.applyMatrix4( this.scene.matrixWorld );
+		*/
 		this.getGlobalPos(this, this.params.position);
 		
 		this.posToCamera = {}
@@ -586,7 +607,7 @@ SOUNDOBJ.prototype = {
 				}
 				
 				var kidToPush = new SOUNDOBJ(this,this.params.children[i])
-				console.log(kidToPush)
+				
 				this.children.push(kidToPush)
 				
 			}
@@ -618,7 +639,7 @@ SOUNDOBJ.prototype = {
 		//TODO
 		//Create a an algorithm to find a new random placing function
 		this.placingFunction = function(whichChild){
-			this.params.children[whichChild].position = cabMATH.toCart(this.radius/2, ((2*Math.PI*whichChild)-Math.PI)/this.params.children.length , 0)	
+			this.params.children[whichChild].position = cabMATH.toCart(this.radius/2, ((2*Math.PI*whichChild)-Math.PI)/this.params.children.length , .00001)	
 		}
 	},
 

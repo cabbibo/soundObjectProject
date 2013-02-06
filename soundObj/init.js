@@ -3,9 +3,16 @@
 			This is where the galaxy is defined.
 			Most likely will  put this in a new file
 			as soon as other galaxys start getting made...
+			
+			
+			
+			KEEP IN MIND:
+			
+			For some CRAZY reason, each object must be its own variable before it is declared as a child. Probably because of a 'this' issue
+			
 		*/
 		
-		
+	
 		
 		
 		var dublab = {
@@ -319,15 +326,19 @@
 		
 
 
-
+var textGalaxy_1_3_1 = {
+	file:"kendrickLamar_theArtOfPeerPressure.mp3"
+}
+var textGalaxy_1_3_2 = {
+	file:"kendrickLamar_m.a.a.dCity.mp3"
+}
+var textGalaxy_1_3_3 = {
+	file:"kendrickLamar_backseatFreestyle.mp3"
+}
 
 var testGalaxy_1_3 = {
 			  file:"cabbibo_onlyRealWind.mp3",
-			  children:[
-			  		{
-						file:"dntel_sundial.mp3",
-						
-					}]
+			  children:[textGalaxy_1_3_1,textGalaxy_1_3_2,textGalaxy_1_3_3,]
 			  
 			}
 	
@@ -455,7 +466,7 @@ var testVerse = {
 				
 				
 				theme:'egg',
-				color:0x0f0fa0,
+				color:0xaaaaaa,
 				
 				children:[
 					laGalaxy,

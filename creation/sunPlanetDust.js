@@ -57,6 +57,13 @@ OBJECTS.prototype.init = function(){
 				objToPush.rotation.z = rotation.z
 			}
 			
+			if(this.params.scale){
+			
+				objToPush.scale.x = this.params.scale[0]
+				objToPush.scale.y = this.params.scale[1]
+				objToPush.scale.z = this.params.scale[2]
+			}
+			
 			this.array.push(objToPush)
 			
 			if(this.params.dataType){
