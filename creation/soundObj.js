@@ -59,7 +59,8 @@ SOUNDOBJ.prototype = {
 			
 			//makes sure that the childrens audio has stopped
 			//hackish...
-			newObj.children[i].audio.stop()			
+			//console.log(newObj.children[i].audio)
+			//newObj.children[i].audio.stop()			
 		}
 	},
 	
@@ -75,23 +76,52 @@ SOUNDOBJ.prototype = {
 		}
 	},
 	
-	
+	checkAudio:function(){
+		if(this.parent){
+			//console.log(this.parent.audio) 	
+			if(!this.parent.audio.audio){
+				console.log('no parent audio')	
+			}else{
+				this.parent.audio.stop()
+			}
+		}
+		if(this.children){
+			for(var i =  0; i< this.children.length;i++){
+				//console.log(this.children[i].audio)	
+				//console.log(this.parent.audio) 	
+				if(!this.children[i].audio.audio){
+					console.log('no children audio')	
+				}else{
+					this.children[i].audio.stop()
+				}
+			}
+			
+		}
+		
+	},
 	
 	//function to be called when are is entered
 	enter:function(whichObj){
+		
 		console.log(whichObj.scene.children.length)
+		console.log(gain)
 		var newObj = this
 		
 		if(whichObj){
 			newObj = whichObj	
 		}
 		
+		newObj.checkAudio()
 		//TODO 
 		//WRAP in fading / scaling functions
 		//also do for exit function
 		
 		//Audio
-		newObj.start()
+		console.log('audio about to start[')
+		newObj.audio.start()
+		
+		
+		
 	
 		//TravelLog / Blog
 		newObj.addToTravelLog()
@@ -112,8 +142,16 @@ SOUNDOBJ.prototype = {
 				towards the center of the soundObj it is moving out of !
 		*/
 		//controls.movementSpeed = newObj.radius/1000
-		controls.maxSpeed = newObj.radius/2
-		controls.acceleration = newObj.radius/100
+		if(newObj.parent){
+		controls.maxSpeed = newObj.radius/5
+		controls.acceleration = newObj.radius/500
+		
+		//If we are in the ultimate universe
+		//make movement much slower, so that its harder to reach the secret level
+		}else{
+			controls.maxSpeed = newObj.radius/20
+			controls.acceleration = newObj.radius/1000
+		}
 		
 		
 		if(newObj.parent){
@@ -127,7 +165,13 @@ SOUNDOBJ.prototype = {
 			newObj.removeChildren(newObj.parent)
 			//then adds this one back in
 			newObj.addObjects()
-			newObj.parent.audio.stop()
+			/*
+			if(newObj.parent.audio.stop()){
+				console.log('STOP CALLSSA')
+				console.log(newObj.parent.audio)
+				newObj.parent.audio.stop()
+				console.log(newObj.parent.audio)
+			}*/
 		}else{
 			newObj.addObjects()
 		}
@@ -146,6 +190,16 @@ SOUNDOBJ.prototype = {
 	
 	//function to be called when area is left (and parent entered)
 	exit:function(whereToEnter){
+		
+		console.log(this.audio)
+		console.log('EXIT cALLEd')
+		//this.audio.stop()	
+		/*if(this.audio.audio!=null){
+			
+			this.audio.stop()	
+		}else{
+			console.log('audio destroyed')	
+		}*/
 		
 		//If this one has a parent, exit to it
 		if(this.parent){
@@ -166,7 +220,7 @@ SOUNDOBJ.prototype = {
 				//create function that finds object by id
 				this.enter(whereToEnter)
 			}
-	
+
 			//otherwise enter the parent
 			console.log(this)
 			this.enter(this.parent)
@@ -297,10 +351,30 @@ SOUNDOBJ.prototype = {
 		}
 		*/
 		
-		
+
 		if(this.posToCamera.d > this.radius){
-			this.exit()	
+			if(this.parent){
+				if(!this.params.secret){
+				this.exit()	
+				}else{
+					console.log('secret called')
+					camera.position.x = this.parent.scene.position.x
+					camera.position.y = this.parent.scene.position.y	
+					camera.position.z = this.parent.scene.position.z
+					this.exit()		
+				}
+			}else{
+				console.log('secret Called')
+				controls.movementSpeed = 0
+				secretEnter = this.children[1]
+				camera.position.x = secretEnter.scene.position.x
+				camera.position.y = secretEnter.scene.position.y
+				camera.position.z = secretEnter.scene.position.z
+			}
 		}
+	
+			
+
 	},
 	
 	//gets the position to the camera	
@@ -346,22 +420,6 @@ SOUNDOBJ.prototype = {
 	
 	
 
-	
-	/*
-	
-	AUDIO FUNCTION
-	
-	*/
-		
-	start:function(){
-		this.audio.start()
-	},
-	
-	
-	stop:function(){
-		this.audio.stop()	
-	},
-	
 	
 	
 	
@@ -652,7 +710,7 @@ SOUNDOBJ.prototype = {
 		
 		var artist = fileText.split('_')[0]
 		var Artist = cCtoSpace(artist)
-		var song = fileText.split('_')[1].split('.')[0]
+		var song = fileText.split('_')[1].split('.mp3')[0]
 		var Song = cCtoSpace(song)
 		
 		child.title = Artist + " - " + Song

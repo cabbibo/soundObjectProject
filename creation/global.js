@@ -1,4 +1,4 @@
-
+2
 /*
 
 	Global Cariables / Objects / Scenes , etc
@@ -16,15 +16,11 @@ window.soundObjArray = []
 //Starting position of the camera
 //TODO:
 //add function to parse url for starting position
-startingCamPos ={
-	x:0,
-	y:0,
-	z:0,
-}
+
 
 
 //camera for the scene, VERY large distance!
-window.camera = new THREE.PerspectiveCamera(70,window.innerWidth/window.innerHeight,1,8000000)
+window.camera = new THREE.PerspectiveCamera(70,window.innerWidth/window.innerHeight,1,8000000000)
 
 //Creates a clock, mostly for use with controls
 window.clock = new THREE.Clock();
@@ -81,7 +77,7 @@ window.travelingFunction = null
 
 
 //creates renderer for this galaxy
-window.renderer=new THREE.WebGLRenderer( { clearColor: 0x000000, clearAlpha: 1, maxLights:500000 } )
+window.renderer=new THREE.WebGLRenderer( { clearColor: 0x000000, clearAlpha: 1,  } )
 renderer.setSize( window.innerWidth, window.innerHeight );	
 
 

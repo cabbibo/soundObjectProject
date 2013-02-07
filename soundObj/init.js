@@ -287,17 +287,15 @@
 				
 				
 				//particle system for the galaxy
-				dust:dustLib.hnrSS,
+				dust:{
+					pNum:200,
+					fNum:20,
+					pPosition: dustLib.pPosition.randomBox(100000),
+					pMaterial: dustLib.pMaterial.colorAdditive(0xff0000,1000),
+					fPosition: dustLib.fPosition.randomBox(20000),
+					fRotation: dustLib.fRotation.noRotation(),
+				},
 				
-				  //The Planets for this solar system
-				  planets:{
-					  numOf:20,
-					  type:planetLib.type.cube(200000,200000,200000),
-					  dataType: planetLib.type.cube(200000,200000,200000),
-					  material:planetLib.material.colorNormal(0x700070),
-					  position:planetLib.position.center(),
-					  rotation:planetLib.rotation.fullCircle(20),	
-				  },
 			  
 				
 				sections:[
@@ -319,6 +317,12 @@
 				
 				],
 				radius:100000,
+				position:{
+					x:-0000,
+					y:0,
+					z:0,
+					
+				}
 				
 			
 	}
@@ -326,27 +330,36 @@
 		
 
 
-var textGalaxy_1_3_1 = {
+var testGalaxy_1_3_1 = {
 	file:"kendrickLamar_theArtOfPeerPressure.mp3"
 }
-var textGalaxy_1_3_2 = {
+var testGalaxy_1_3_2 = {
 	file:"kendrickLamar_m.a.a.dCity.mp3"
 }
-var textGalaxy_1_3_3 = {
+var testGalaxy_1_3_3 = {
 	file:"kendrickLamar_backseatFreestyle.mp3"
 }
 
 var testGalaxy_1_3 = {
 			  file:"cabbibo_onlyRealWind.mp3",
-			  children:[textGalaxy_1_3_1,textGalaxy_1_3_2,textGalaxy_1_3_3,]
+			  children:[testGalaxy_1_3_1,testGalaxy_1_3_2,testGalaxy_1_3_3,]
 			  
 			}
 	
-
+var testGalaxy_1_2_1 = {
+	file:"kendrickLamar_theArtOfPeerPressure.mp3"
+}
+var testGalaxy_1_2_2 = {
+	file:"kendrickLamar_m.a.a.dCity.mp3"
+}
+var testGalaxy_1_2_3 = {
+	file:"kendrickLamar_backseatFreestyle.mp3"
+}
 
 
 var testGalaxy_1_2 = {
 			  file:"cabbibo_galaxEye.mp3",
+			   children:[testGalaxy_1_2_1,testGalaxy_1_2_2,testGalaxy_1_2_3,]
 }
 
 
@@ -364,6 +377,126 @@ var testGalaxy_1_1 = {
 	
 }
 
+var testGalaxy_3_3_1 = {
+	file:"kendrickLamar_theArtOfPeerPressure.mp3"
+}
+var testGalaxy_3_3_2 = {
+	file:"kendrickLamar_m.a.a.dCity.mp3"
+}
+var testGalaxy_3_3_3 = {
+	file:"kendrickLamar_backseatFreestyle.mp3"
+}
+
+
+
+var testGalaxy_3_3 = {
+			 
+			  id:"testGalaxy",
+			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
+			  file:"cabbibo_mountainNight.mp3",
+			  img:"img/switzIII/swissIII.png",
+			  links:[
+					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
+					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
+				],
+			  children:[testGalaxy_3_3_1,testGalaxy_3_3_2,testGalaxy_3_3_3,]
+			  
+}
+	
+var testGalaxy_3_2_1 = {
+	file:"kendrickLamar_theArtOfPeerPressure.mp3"
+}
+var testGalaxy_3_2_2 = {
+	file:"kendrickLamar_m.a.a.dCity.mp3"
+}
+var testGalaxy_3_2_3 = {
+	file:"kendrickLamar_backseatFreestyle.mp3"
+}
+
+
+var testGalaxy_3_2 = {
+			 
+			  id:"testGalaxy",
+			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
+			  file:"cabbibo_mountainNight.mp3",
+			  img:"img/switzIII/swissIII.png",
+			  links:[
+					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
+					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
+				],
+			 children:[testGalaxy_3_2_1,testGalaxy_3_2_2,testGalaxy_3_2_3,]
+			  
+	
+}
+
+var testGalaxy_3_1_1 = {
+	file:"kendrickLamar_theArtOfPeerPressure.mp3"
+}
+var testGalaxy_3_1_2 = {
+	file:"kendrickLamar_m.a.a.dCity.mp3"
+}
+var testGalaxy_3_1_3 = {
+	file:"kendrickLamar_backseatFreestyle.mp3"
+}
+
+var testGalaxy_3_1 = {
+			 
+			  id:"testGalaxy",
+			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
+			  file:"cabbibo_mountainNight.mp3",
+			  img:"img/switzIII/swissIII.png",
+			  links:[
+					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
+					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
+				],
+				children:[testGalaxy_3_1_1,testGalaxy_3_1_2,testGalaxy_3_1_3,]
+			  
+	
+}
+
+
+var testGalaxy_2_3 = {
+			 
+			  id:"testGalaxy",
+			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
+			  file:"cabbibo_mountainNight.mp3",
+			  img:"img/switzIII/swissIII.png",
+			  links:[
+					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
+					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
+				],
+			  
+	
+}
+var testGalaxy_2_2 = {
+			 
+			  id:"testGalaxy",
+			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
+			  file:"cabbibo_mountainNight.mp3",
+			  img:"img/switzIII/swissIII.png",
+			  links:[
+					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
+					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
+				],
+			  
+	
+}
+
+var testGalaxy_2_1 = {
+			 
+			  id:"testGalaxy",
+			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
+			  file:"cabbibo_mountainNight.mp3",
+			  img:"img/switzIII/swissIII.png",
+			  links:[
+					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
+					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
+				],
+			  
+	
+}
+
+
 
 var testGalaxy_3 = {
 			 
@@ -375,6 +508,8 @@ var testGalaxy_3 = {
 					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
 					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
 				],
+			children:[testGalaxy_3_1,testGalaxy_3_2,testGalaxy_3_3]
+
 			  
 	
 }
@@ -390,6 +525,7 @@ var testGalaxy_2 = {
 					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
 					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
 				],
+			  children:[testGalaxy_2_1,testGalaxy_2_2,testGalaxy_2_3]
 			  
 	
 }
@@ -465,7 +601,7 @@ var testVerse = {
 				],
 				
 				
-				theme:'egg',
+				
 				color:0xaaaaaa,
 				
 				children:[
@@ -476,10 +612,10 @@ var testVerse = {
 				//particle system for the galaxy
 				dust:{
 					pNum:200,
-					fNum:200,
-					pPosition: dustLib.pPosition.randomBox(100000),
-					pMaterial: dustLib.pMaterial.color(0xff0000,1000),
-					fPosition: dustLib.fPosition.randomBox(1000000),
+					fNum:20,
+					pPosition: dustLib.pPosition.randomBox(1000000),
+					pMaterial: dustLib.pMaterial.colorAdditive(0xff0000,1000),
+					fPosition: dustLib.fPosition.randomBox(500000),
 					fRotation: dustLib.fRotation.noRotation(),
 				},
 				
@@ -497,12 +633,102 @@ var testVerse = {
 				
 				],
 				
-				radius:500000,
+				radius:800000,
+				
+				position:{
+					x:-500000,
+					y:0,
+					z:0,
+				}
+	}
+		
+	
+	
+var secretChild = {
+	file:"cabbibo_belieber.mp3",
+	dust:{
+				pNum:20,
+				fNum:200,
+				pPosition: dustLib.pPosition.randomBox(10000),
+				pMaterial: dustLib.pMaterial.colorAdditive(0x0000ff,100),
+				fPosition: dustLib.fPosition.randomBox(10000),
+				fRotation: dustLib.fRotation.noRotation(),
+			},
+}
+	
+var secretVerse = {
+			file:"cabbibo_belieber.mp3",
+			//particle system for the galaxy
+			dust:{
+				pNum:20,
+				fNum:200,
+				pPosition: dustLib.pPosition.randomBox(100000),
+				pMaterial: dustLib.pMaterial.colorAdditive(0x0000ff,1000),
+				fPosition: dustLib.fPosition.randomBox(100000),
+				fRotation: dustLib.fRotation.noRotation(),
+			},
+			
+			children:[secretChild],
+			secret:true,
+			radius:50000,
+			
+			position:{
+				x:0,
+				y:0,
+				z:50000000,
+			}
+		
+	}	
+		
+var multiVerse = {
+				id:"MultiVerse",
+				info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
+				title:"EÄ",
+				file:"theField_overTheIce.mp3",
+				img:"img/hoverCube.png",
+				links:[
+					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
+					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
+				],
+				
+				
+				theme:'none',
+				color:0xaaaaaa,
+				
+				children:[
+					testVerse,
+					secretVerse
+				],
+				
+				//particle system for the galaxy
+				dust:{
+					pNum:200,
+					fNum:200,
+					pPosition: dustLib.pPosition.randomBox(10000000),
+					pMaterial: dustLib.pMaterial.colorAdditive(0xff0000,10000),
+					fPosition: dustLib.fPosition.randomBox(10000000),
+					fRotation: dustLib.fRotation.noRotation(),
+				},
+				
+				sections:[
+					{	
+					
+						dust:{
+							rotation:dustLib.visual.rotation.freqX,
+							scale:dustLib.visual.scale.freqXYZ
+						},
+						
+						//Time when the first section comes in
+						time:0
+					},
+				
+				],
+				
+				radius:30000000,
 				
 				position:{
 					x:0,
 					y:0,
 					z:0,
 				}
-	}
-		
+}
