@@ -12,7 +12,16 @@
 */
 
 
-themeArray = [ 'egg','ring','hearts']
+themeArray = [ 
+	'egg',	//sphere suns as outside random planet inside
+	'ring', //sun in center, planets in ring
+	'present', //Cube sun as outside, random planet inside
+	'sphere', //like ring but planets placed in random spher
+	'line', //like ring but planets placed in line
+	'spiral', //like ring but planets place in spiral *NEED TO WRITE NEW PLACEMENT FUNCTINO FOR THIS*
+	'cube',//like ring, but 8 planet groups place in corners of cubes *NEED TO WRITE NEW PLACEMENT FUNCTINO FOR THIS*
+	'tetrahedron',// like cube but 6 planet groups placed on corners of tetrahedron *NEED TO WRITE NEW PLACEMENT FUNCTINO FOR THIS* 
+]
 
 createTheme = function(whichObj){
 		
@@ -39,28 +48,47 @@ createTheme = function(whichObj){
 		
 		
 		if(!whichObj.planets.numOf){
-			whichObj.planets.numOf = Math.ceil(Math.random()*35)+5
+			//Gets planet number between 5 and 40
+
+			if(whichObj.theme == 'spiral'){
+				whichObj.planets.numOf = Math.ceil(Math.random()*10)+20
+			}else if(whichObj.theme == 'cube'){
+				whichObj.planets.numOf =(Math.ceil(Math.random()*5) + 3) * 8
+				
+			}else{
+				whichObj.planets.numOf = Math.ceil(Math.random()*35)+5
+			}
 		}
 		
 		//Will assign dataType as well
 		if(!whichObj.planets.type){
 			
-			if(whichObj.theme == 'egg'){
-				var type = planetLib.randomType((whichObj.radius/10))
+			if(whichObj.theme == 'egg'  || whichObj.theme == 'spiral' || whichObj.theme == 'present' ){
+				var range = (Math.random()*(whichObj.radius/10))+whichObj.radius/15
+				var type = planetLib.randomType((range))
+				whichObj.planets.type = type.type	
+				whichObj.planets.dataType = type.dataType
+				if(type.scale){
+					whichObj.planets.scale = type.scale	
+				}
+			}else if(whichObj.theme == 'cube' || whichObj.theme == 'tetrahedron' ){
+				var range = (Math.random()*(whichObj.radius/8))+whichObj.radius/8
+				var type = planetLib.randomType((range))  
 				whichObj.planets.type = type.type	
 				whichObj.planets.dataType = type.dataType
 				if(type.scale){
 					whichObj.planets.scale = type.scale	
 				}
 			}else if(whichObj.theme == 'ring'){
-				var type = planetLib.randomType((whichObj.radius/4))      //2 is VERY SMALL 3:HEART!
+				var type = planetLib.randomType((whichObj.radius/4))    
 				whichObj.planets.type = type.type	
 				whichObj.planets.dataType = type.dataType
 				if(type.scale){
 					whichObj.planets.scale = type.scale	
 				}
-			}else if(whichObj.theme == 'hearts'){
-				var type = planetLib.randomType((whichObj.radius/4),[3])      //2 is VERY SMALL 3:HEART!
+			}else{
+				var range = (Math.random()*(whichObj.radius/10))+whichObj.radius/15
+				var type = planetLib.randomType((range))
 				whichObj.planets.type = type.type	
 				whichObj.planets.dataType = type.dataType
 				if(type.scale){
@@ -75,7 +103,7 @@ createTheme = function(whichObj){
 		if(!whichObj.planets.material){
 			var materialRandom = Math.floor((Math.random()*2))
 			if(materialRandom == 1){
-				whichObj.planets.material = planetLib.material.colorNormal(whichObj.color)
+				whichObj.planets.material = planetLib.material.normal()//colorNormal(whichObj.color)
 			}else{
 				whichObj.planets.material = planetLib.material.imgMaterial(whichObj.img)	
 				if(!whichObj.lights){
@@ -104,15 +132,22 @@ createTheme = function(whichObj){
 		
 		
 		if(!whichObj.planets.position){
-			
-				if(whichObj.theme == 'egg'){
-					whichObj.planets.position = planetLib.randomPosition(whichObj.radius/4,whichObj.planets.numOf)
-				}else if(whichObj.theme == 'ring'){
-					whichObj.planets.position = planetLib.position.fullCircle(whichObj.radius*.8,whichObj.planets.numOf)
-				}else{
-					whichObj.planets.position = planetLib.randomPosition(Math.random()*whichObj.radius,whichObj.planets.numOf)
-				}
-				
+			  if(whichObj.theme == 'egg'){
+				  whichObj.planets.position = planetLib.randomPosition(whichObj.radius/4,whichObj.planets.numOf)
+				  
+			  }else if(whichObj.theme == 'spiral'){
+				  whichObj.planets.position = planetLib.randomPosition(whichObj.radius,whichObj.planets.numOf,[6])
+			  }else if(whichObj.theme == 'cube'){
+				  whichObj.planets.position = planetLib.randomPosition(whichObj.radius/2,whichObj.planets.numOf,[7])
+				  
+			  }else if(whichObj.theme == 'tetrahedron'){
+				  whichObj.planets.position = planetLib.randomPosition(whichObj.radius/2,whichObj.planets.numOf,[8])
+				  
+			  }else if(whichObj.theme == 'ring'){
+				  whichObj.planets.position = planetLib.position.fullCircle(whichObj.radius*.8,whichObj.planets.numOf)
+			  }else{
+				  whichObj.planets.position = planetLib.randomPosition(Math.random()*whichObj.radius,whichObj.planets.numOf)
+			  }
 		}
 		
 		if(!whichObj.planets.rotation){
@@ -135,6 +170,8 @@ createTheme = function(whichObj){
 				whichObj.suns.numOf = Math.ceil(Math.random()*20)+10
 			}else if(whichObj.theme == 'ring'){
 				whichObj.suns.numOf = Math.ceil(Math.random()*20)+10
+			}else if(whichObj.theme == 'present'){
+				whichObj.suns.numOf = 1
 			}else{
 				whichObj.suns.numOf = Math.ceil(Math.random()*20)+10
 			}
@@ -144,18 +181,18 @@ createTheme = function(whichObj){
 		//Will assign dataType as well
 		if(!whichObj.suns.type){
 			if(whichObj.theme =='egg'){
-				var type = planetLib.randomType(whichObj.radius,[1])
+				var type = planetLib.randomType(whichObj.radius,[1,5])
 				whichObj.suns.type = type.type	
 				whichObj.suns.dataType = type.dataType
 				
-			}else if(whichObj.theme =='ring'){
-				var randomSolid = Math.floor(Math.random()*2)
-				var type = planetLib.randomType(whichObj.radius/20)
+			}else if(whichObj.theme =='present'){
+				var type = planetLib.randomType((whichObj.radius*1.5),[0])
 				whichObj.suns.type = type.type	
 				whichObj.suns.dataType = type.dataType
-			}else if(whichObj.theme =='heart'){
+				
+			}else if(whichObj.theme =='ring' || whichObj.theme == 'cube' || whichObj.theme == 'tetrahedron' || whichObj.theme == 'spiral'){
 				var randomSolid = Math.floor(Math.random()*2)
-				var type = planetLib.randomType(whichObj.radius/10,[3])
+				var type = planetLib.randomType(whichObj.radius/20)
 				whichObj.suns.type = type.type	
 				whichObj.suns.dataType = type.dataType
 			}else{
@@ -197,6 +234,8 @@ createTheme = function(whichObj){
 		
 		if(!whichObj.suns.position){
 			if(whichObj.theme == 'egg' || whichObj.theme == 'ring'){
+				whichObj.suns.position = planetLib.position.center()
+			}else{
 				whichObj.suns.position = planetLib.position.center()
 			}
 		}
@@ -277,6 +316,9 @@ createTheme = function(whichObj){
 			}else if(whichObj.theme == 'egg'){
 				randomVis = planetLib.randomVis()
 				
+			}else if(whichObj.theme == 'spiral' || whichObj.theme == 'cube' || whichObj.theme == 'tetrahedron'){
+				randomVis = planetLib.randomVis({position:[999]})
+				
 			}else{
 				randomVis = planetLib.randomVis()
 			}
@@ -287,15 +329,15 @@ createTheme = function(whichObj){
 		
 		
 		if (!whichObj.sections[0].sun){
-			if(whichObj.theme == 'egg'){
+			var randomVis
+			
+			if(whichObj.theme == 'egg' || whichObj.theme == 'present'){
 				randomVis = sunLib.randomVis({vertex:[1,2,3,4,6],position:[999]})
-				whichObj.sections[0].sun = randomVis
 			}else{
 				randomVis = sunLib.randomVis()
-				whichObj.sections[0].sun = randomVis
-				
 			}
 			
+			whichObj.sections[0].sun = randomVis
 		}
 		
 		
@@ -329,16 +371,19 @@ planetLib.randomPosition = function(size,numOf,possible){
 		planetLib.position.fullCircle(size,numOf),
 		planetLib.position.fullSphere(size,numOf),
 		planetLib.position.loopDLoop(size,numOf),
-		planetLib.position.lineX(size,numOf)
+		planetLib.position.lineX(size,numOf),
+		planetLib.position.spiral(size,numOf),
+		planetLib.position.cube(size,numOf),
+		planetLib.position.tetrahedron(size,numOf),
 	]
 	var randomType 
 	if(possible){
 		randomType = possible[Math.floor((Math.random()*possible.length))]
 	}else{
-		randomType = Math.floor(Math.random()*9)
+		randomType = Math.floor(Math.random()*array.length)
 	}
 	
-	var toReturn = array[0]
+	var toReturn = array[randomType]
 	return toReturn
 }
 
@@ -387,28 +432,30 @@ planetLib.randomType =  function(size,possible) {
 		toReturn.dataType = planetLib.type.sphere(size,10,10)
 		break;
 		
+		
 		case 2:
 		toReturn.type = planetLib.type.knot1(10,5,5),
 		toReturn.dataType = planetLib.type.knot1(10,5,5),
 		toReturn.scale = [size/300,size/300,size/300]
 		break;
 		
-		case 3:
-		toReturn.type = planetLib.type.knot2(10,5,5),
-		toReturn.dataType = planetLib.type.knot2(10,5,5),
-		toReturn.scale = [size/300,size/300,size/300]
-		break;
 		
-		case 4:
+		case 3:
 		toReturn.type = planetLib.type.knot3(10,5,5),
 		toReturn.dataType = planetLib.type.knot3(10,5,5),
 		toReturn.scale = [size/200,size/200,size/200]
 		break;
 		
-		case 5:
+		case 4:
 		toReturn.type = planetLib.type.knot4(10,5,5),
 		toReturn.dataType = planetLib.type.knot4(10,5,5),
 		toReturn.scale = [size/200,size/200,size/200]
+		break;
+		
+		
+		case 5:
+		toReturn.type = planetLib.type.icosahedron(size,1)
+		toReturn.dataType = planetLib.type.icosahedron(size,1)
 		break;
 	}
 	

@@ -98,16 +98,21 @@ SECTION.prototype = {
 				}
 			
 				var planet=whichObj.objects.planets.array[0]
-
+				var scale = 1
+				if(planet.scale){
+					//console.log('scaled')
+					scale = 1/planet.scale.x	
+				}
+				
 				if(params.vertex){
 					//This area controls the actual verticies of the sound objs
 					for(var i=0;i<planet.geometry.vertices.length;i++){
 						
 						if(n==i){
 								
-							planet.geometry.vertices[i].x = params.vertex.x(whichObj,freqData,binCount,n)
-							planet.geometry.vertices[i].z = params.vertex.y(whichObj,freqData,binCount,n)
-							planet.geometry.vertices[i].y = params.vertex.z(whichObj,freqData,binCount,n)
+							planet.geometry.vertices[i].x = params.vertex.x(whichObj,freqData,binCount,n)*scale
+							planet.geometry.vertices[i].z = params.vertex.y(whichObj,freqData,binCount,n)*scale
+							planet.geometry.vertices[i].y = params.vertex.z(whichObj,freqData,binCount,n)*scale
 						}
 					}
 					planet.geometry.verticesNeedUpdate = true;

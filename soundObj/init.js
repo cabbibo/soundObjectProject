@@ -342,6 +342,7 @@ var testGalaxy_1_3_3 = {
 
 var testGalaxy_1_3 = {
 			  file:"cabbibo_onlyRealWind.mp3",
+			  theme:'random',
 			  children:[testGalaxy_1_3_1,testGalaxy_1_3_2,testGalaxy_1_3_3,]
 			  
 			}
@@ -359,6 +360,7 @@ var testGalaxy_1_2_3 = {
 
 var testGalaxy_1_2 = {
 			  file:"cabbibo_galaxEye.mp3",
+			  theme:'random',
 			   children:[testGalaxy_1_2_1,testGalaxy_1_2_2,testGalaxy_1_2_3,]
 }
 
@@ -369,6 +371,7 @@ var testGalaxy_1_1 = {
 			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
 			  file:"cabbibo_mountainNight.mp3",
 			  img:"img/switzIII/swissIII.png",
+			  theme:'random',
 			  links:[
 					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
 					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
@@ -395,6 +398,7 @@ var testGalaxy_3_3 = {
 			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
 			  file:"cabbibo_mountainNight.mp3",
 			  img:"img/switzIII/swissIII.png",
+			  theme:'random',
 			  links:[
 					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
 					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
@@ -420,6 +424,7 @@ var testGalaxy_3_2 = {
 			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
 			  file:"cabbibo_mountainNight.mp3",
 			  img:"img/switzIII/swissIII.png",
+			  theme:'random',
 			  links:[
 					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
 					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
@@ -445,6 +450,7 @@ var testGalaxy_3_1 = {
 			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
 			  file:"cabbibo_mountainNight.mp3",
 			  img:"img/switzIII/swissIII.png",
+			  theme:'random',
 			  links:[
 					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
 					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
@@ -461,6 +467,7 @@ var testGalaxy_2_3 = {
 			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
 			  file:"cabbibo_mountainNight.mp3",
 			  img:"img/switzIII/swissIII.png",
+			  theme:'random',
 			  links:[
 					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
 					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
@@ -474,6 +481,7 @@ var testGalaxy_2_2 = {
 			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
 			  file:"cabbibo_mountainNight.mp3",
 			  img:"img/switzIII/swissIII.png",
+			  theme:'random',
 			  links:[
 					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
 					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
@@ -488,6 +496,7 @@ var testGalaxy_2_1 = {
 			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
 			  file:"cabbibo_mountainNight.mp3",
 			  img:"img/switzIII/swissIII.png",
+			  theme:'random',
 			  links:[
 					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
 					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
@@ -504,6 +513,7 @@ var testGalaxy_3 = {
 			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
 			  file:"cabbibo_shanesSpot.mp3",
 			  img:"img/switzIII/swissII.png",
+			  theme:'random',
 			  links:[
 					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
 					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
@@ -521,6 +531,7 @@ var testGalaxy_2 = {
 			  info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
 			  file:"cabbibo_branchBossa.mp3",
 			  img:"img/switzIII/swissI.png",
+			  theme:'random',
 			  links:[
 					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
 					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
@@ -541,7 +552,7 @@ var testGalaxy_1 = {
 					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
 					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
 				],
-				
+				theme:'random',
 			  color:0xa070a0,
 			  children:[
 			  	testGalaxy_1_1,
@@ -573,7 +584,7 @@ var testGalaxy = {
 				],
 				
 			
-			  theme:'egg',
+			  theme:'random',
 			  children:[
 			  	testGalaxy_1,
 				testGalaxy_2,

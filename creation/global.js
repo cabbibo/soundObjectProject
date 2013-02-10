@@ -1,4 +1,4 @@
-2
+
 /*
 
 	Global Cariables / Objects / Scenes , etc
@@ -20,7 +20,7 @@ window.soundObjArray = []
 
 
 //camera for the scene, VERY large distance!
-window.camera = new THREE.PerspectiveCamera(70,window.innerWidth/window.innerHeight,1,8000000000)
+window.camera = new THREE.PerspectiveCamera(70,window.innerWidth/window.innerHeight,100,8000000000)
 
 //Creates a clock, mostly for use with controls
 window.clock = new THREE.Clock();

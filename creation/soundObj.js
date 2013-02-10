@@ -80,7 +80,7 @@ SOUNDOBJ.prototype = {
 		if(this.parent){
 			//console.log(this.parent.audio) 	
 			if(!this.parent.audio.audio){
-				console.log('no parent audio')	
+				
 			}else{
 				this.parent.audio.stop()
 			}
@@ -90,7 +90,7 @@ SOUNDOBJ.prototype = {
 				//console.log(this.children[i].audio)	
 				//console.log(this.parent.audio) 	
 				if(!this.children[i].audio.audio){
-					console.log('no children audio')	
+					
 				}else{
 					this.children[i].audio.stop()
 				}
@@ -102,9 +102,7 @@ SOUNDOBJ.prototype = {
 	
 	//function to be called when are is entered
 	enter:function(whichObj){
-		
-		console.log(whichObj.scene.children.length)
-		console.log(gain)
+	
 		var newObj = this
 		
 		if(whichObj){
@@ -117,7 +115,7 @@ SOUNDOBJ.prototype = {
 		//also do for exit function
 		
 		//Audio
-		console.log('audio about to start[')
+	
 		newObj.audio.start()
 		
 		
@@ -146,6 +144,13 @@ SOUNDOBJ.prototype = {
 		controls.maxSpeed = newObj.radius/5
 		controls.acceleration = newObj.radius/500
 		
+		//First Attempt at 'Z Fighting' by dynamically changing near and far
+		
+		camera.far  = newObj.radius*10
+		camera.near = newObj.radius/1000
+		camera.updateProjectionMatrix();
+		console.log(camera)		
+
 		//If we are in the ultimate universe
 		//make movement much slower, so that its harder to reach the secret level
 		}else{
@@ -191,8 +196,7 @@ SOUNDOBJ.prototype = {
 	//function to be called when area is left (and parent entered)
 	exit:function(whereToEnter){
 		
-		console.log(this.audio)
-		console.log('EXIT cALLEd')
+		
 		//this.audio.stop()	
 		/*if(this.audio.audio!=null){
 			
@@ -214,15 +218,14 @@ SOUNDOBJ.prototype = {
 			
 			//If there is somewhere specific to enter, enter that region
 			if(whereToEnter){
-				console.log('entering specific region')
-				console.log(whereToEnter)
+				
 				//TODO,
 				//create function that finds object by id
 				this.enter(whereToEnter)
 			}
 
 			//otherwise enter the parent
-			console.log(this)
+			
 			this.enter(this.parent)
 			
 		//If there is no parent, takes user to random sound Object
@@ -279,10 +282,10 @@ SOUNDOBJ.prototype = {
 	
 	checkEnter:function(){
 		this.getPosToCamera()
-		/*
 		
 		
-		//this will be the area where the other objects in the field will fade out
+		//NEED TO MAKE SURE THAT SCALE ALWAYS GOES TO 1 ! 
+	/*
 		if(this.posToCamera.d < (this.radius +this.radius/2)){
 			
 			//gets a value between 1 & 0 to determine the radius
@@ -323,7 +326,8 @@ SOUNDOBJ.prototype = {
 			
 			
 		}
-		*/
+	*/
+		
 		
 		if(this.posToCamera.d < this.radius){
 			this.enter(this)	
@@ -332,9 +336,11 @@ SOUNDOBJ.prototype = {
 	
 	checkExit:function(){
 		
+		
 		/*
+		//NEED TO MAKE SURE SCALE ALWAYS GOES TO 1 !
 		if(this.posToCamera.d > this.radius-(this.radius/4)){
-			var opacity = (this.radius-this.posToCamera.d)/(this.radius/4)
+			var opacity = (this.radius-this.posToCamera.d)/(this.radius/8)
 			
 			if(this.children){
 				for(var i = 0; i <this.children.length ; i++){

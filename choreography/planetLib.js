@@ -18,6 +18,11 @@ var planetLib = {
 			return toReturn
 		},
 		
+		icosahedron:function(size,subDivisions){
+			var toReturn = new THREE.IcosahedronGeometry(size,subDivisions)
+			return toReturn
+		},
+		
 		//Almost all knots come from Curve Extras by zz85
 		knot1:function(x,y,z){
 			var gKnot = new THREE.Curves.GrannyKnot();
@@ -42,6 +47,8 @@ var planetLib = {
 			var toReturn = new THREE.ParametricGeometries.TubeGeometry( knot, x, y, z, true, false );
 			return	toReturn
 		},
+		
+		
 	},
 	
 	
@@ -153,6 +160,8 @@ var planetLib = {
 				}
 				return functionToReturn
 		},
+		
+		
 		//places objects in a sphere
 		loopDLoop:function(size,numOfObjs){	
 			
@@ -171,6 +180,87 @@ var planetLib = {
 				}
 				return functionToReturn
 		},
+		
+		
+		spiral:function(size,numOf){
+				var functionToReturn = function(n){
+					
+					var pos = cabMATH.toCart(size*(n/numOf),(4*Math.PI*(n/numOf)),0)
+					var x = pos.x
+					var y = pos.y
+					var z = pos.z
+					var toReturn = {
+						x:x,
+						y:y,
+						z:z	
+					}
+					return toReturn
+				}
+				return functionToReturn
+		},
+
+		cube:function(size,numOf){
+				var functionToReturn = function(n){
+					
+					var whichDir = n%8
+					
+					var dirArray = [
+						[1,1,1],
+						[-1,-1,-1],
+						[-1,-1,1],
+						[1,-1,-1],
+						[-1,1,-1],
+						[-1,1,1],
+						[1,-1,1],
+						[1,1,-1]
+					]
+					
+					var x = dirArray[whichDir][0]*(size/Math.sqrt(3))
+					var y = dirArray[whichDir][1]*(size/Math.sqrt(3))
+					var z = dirArray[whichDir][2]*(size/Math.sqrt(3))
+					var toReturn = {
+						x:x,
+						y:y,
+						z:z	
+					}
+					return toReturn
+				}
+			
+				return functionToReturn
+			
+			
+		},
+		tetrahedron:function(size,numOf){
+				var functionToReturn = function(n){
+					
+					var whichDir = n%6
+					
+					var dirArray = [
+						[1,0,0],
+						[-1,0,0],
+						[0,-1,0],
+						[0,1,0],
+						[0,0,-1],
+						[0,0,1],
+					]
+					
+					
+					var x = dirArray[whichDir][0]*size
+					var y = dirArray[whichDir][1]*size
+					var z = dirArray[whichDir][2]*size
+					var toReturn = {
+						x:x,
+						y:y,
+						z:z	
+					}
+					return toReturn
+				}
+			
+				return functionToReturn
+			
+			
+		},
+		
 		
 		//TODO
 		//recreate analyser.html visualizations
