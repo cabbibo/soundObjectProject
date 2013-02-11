@@ -262,7 +262,7 @@
 			]
 		}
 		
-	var laGalaxy = {
+	var la = {
 				id:"laGalaxy",
 				title:"Los Angeles Galaxy",
 				info:"This one's for <a href='http://thehitandrun.com/' target='_blank'>CREW</a>",
