@@ -11,13 +11,48 @@ GREAT BRITAIN GREAT BRITAIN GREAT BRITAIN GREAT BRITAIN GREAT BRITAIN GREAT BRIT
 //England
 
 
-var gangColours_pebbleDash
+var gangColours_pebbleDash={
+	img:"img/galaxies/europe/britain/england/gangColours.png",
+	file:"gangColours_pebbleDash.mp3",
+	
+	links:[
+		["Soundcloud","https://soundcloud.com/gangcolours"],
+	],
+	 
+	
+}
 
 
-var bmb_labyrinth
-var lostTwin_nothing
-var theRisks_tooManyYChromosomes
-var brownswood_electric={
+var bmb_labyrinth={
+	img:"img/galaxies/europe/britain/england/brownswoodElectric.png",
+	file:"bmb_labyrinth.mp3",
+	title:"BMBxSpacekid - Labyrinth",	
+	links:[
+		["Bandcamp","http://spacekid.bandcamp.com/"],
+	],
+}
+var lostTwin_nothing={
+	img:"img/galaxies/europe/britain/england/brownswoodElectric.png",
+	file:"lostTwin_nothing.mp3",	
+	links:[
+		["Bandcampe","http://losttwinmusic.bandcamp.com/"],
+	],
+}
+var theRisks_tooManyYChromosomes={
+	img:"img/galaxies/europe/britain/england/brownswoodElectric.png",
+	file:"theRisks_tooManyYChromosomes.mp3",	
+	links:[
+		["Soundcloud","https://soundcloud.com/monolithiummm/risks-y-chromosomes"],
+	],
+}
+var brownswoodElectric={
+	img:"img/galaxies/europe/britain/england/brownswoodElectric.png",
+	file:"djurm_lies.mp3",	
+	links:[
+		["Music: Djurm - Lies (Ft. Shadowbox)","https://soundcloud.com/djrum"],
+		["Gilles Peterson - Electr*c","http://www.gillespetersonworldwide.com/category/electric/"]
+	],
+	 
 	children:[
 		bmb_labyrinth,
 		lostTwin_nothing,
@@ -25,17 +60,49 @@ var brownswood_electric={
 	
 	]
 		
-	
 }
 
-var docDaneeka_tobyjug
-var groundislava_creeperShit
-var monopoly_withGrace
+var docDaneeka_tobyjug={
+	
+	file:"monopoly_withGrace.mp3",
+	img:"img/galaxies/europe/britain/england/worldwideFamily.png",
+	title:"Doc Daneeka & Abigail Wyles - Tobyjug",
+	
+	links:[
+		["Soundcloud","http://www.facebook.com/docdaneeka/info"],
+	],
+	 
+}
+
+var groundislava_creeperShit={
+	
+	file:"groundislava_creeperShit.mp3",
+	img:"img/galaxies/europe/britain/england/worldwideFamily.png",
+	
+	
+	links:[
+		["Soundcloud","https://soundcloud.com/groundislava"],
+	],
+	 
+}
+
+var monopoly_withGrace={
+	
+	file:"monopoly_withGrace.mp3",
+	img:"img/galaxies/europe/britain/england/worldwideFamily.png",
+	info:"Charles Dickerson is a Los Angeles based electronic music producer known by the stage name Mono/Poly. His music alias is taken from the 1980s Korg keyboard and symbolizes the artist's multifaceted audio productions. He is often known for his experimental and multi-genre producing of astral soundscapes with glitch-based hip-hop. <br/><br/> From <a href='http://en.wikipedia.org/wiki/Mono/Poly' target='_blank'>Wikipedia</a>",
+	
+	links:[
+		["Myspace","http://www.myspace.com/monopolytracks"],
+	],
+	 
+}
+
 var esmk_bluntHopes ={
 	
-	file:"samiyam_medallion.mp3",
+	file:"esmk_bluntHopes.mp3",
 	img:"img/galaxies/europe/britain/england/worldwideFamily.png",
-	info:" El Super Music Collective is what I've been waiting for. The group, spearheaded by artists Charles Melvin, Cozy, Pink Noise Ordinance, and Xei the Ghost, is a consortium as diverse as their monikers. From their shared Lincoln Heights home, they are expanding the periphery of music-making one aberrant beat at a time.<br/><br/>Their single, 'Blunt Hopes', featured on Kutmah's compilation, Worldwide Family Volume 2, is such a heady fusion of sounds that classifying it as any one genre would be misrepresentative of El Super's work. The track is a clear composite of divergent, yet compatible, minds. Underneath Charles Melvin's transgressive lyrics, a deep bass is suppressed by a glitchy beat, amplified, in the last half of the song, by Cozy's ethereal vocals. The alluring video, directed by Gerry Maravilla, only enhances the track. <br/><br/>The most promising part of El Super though, is that they are as successful solo as in collaboration. The members, each given to a specific wont, are experts in their personal sound. Pink Noise Ordinance may be the future of dance with motley anime remixes. Charles Melvin perfects a California drawl in 'King Supa.' You'll be touching yourself before the end of Cozy's 'Come'ere' and Xei the Ghost, unrivaled in his midwestern spit, you must hear for yourself. <br/><br/>El Super's heterogenous music won't stay underground for long.",
+	info:" El Super Music Collective is what I've been waiting for. The group, spearheaded by artists Charles Melvin, Cozy, Pink Noise Ordinance, and Xei the Ghost, is a consortium as diverse as their monikers. From their shared Lincoln Heights home, they are expanding the periphery of music-making one aberrant beat at a time.<br/><br/>Their single, 'Blunt Hopes', featured on Kutmah's compilation, Worldwide Family Volume 2, is such a heady fusion of sounds that classifying it as any one genre would be misrepresentative of El Super's work. The track is a clear composite of divergent, yet compatible, minds. Underneath Charles Melvin's transgressive lyrics, a deep bass is suppressed by a glitchy beat, amplified, in the last half of the song, by Cozy's ethereal vocals. The alluring video, directed by Gerry Maravilla, only enhances the track. <br/><br/>The most promising part of El Super though, is that they are as successful solo as in collaboration. The members, each given to a specific wont, are experts in their personal sound. Pink Noise Ordinance may be the future of dance with motley anime remixes. Charles Melvin perfects a California drawl in 'King Supa.' You'll be touching yourself before the end of Cozy's 'Come'ere' and Xei the Ghost, unrivaled in his midwestern spit, you must hear for yourself. <br/><br/>El Super's heterogenous music won't stay underground for long.<br/><br/> From <a href='http://www.inverted-audio.com/kutmah-presents-worldwide-family-vol-2/' target='_blank'>Inverted Audio</a>",
 	
 	links:[
 		["Website","http://elsupermusiccollective.com/esmk.html"],
@@ -76,7 +143,7 @@ var brownswood={
 	
 	children:[
 		kutmah_worldwideFamily,
-		brownswood_electric,
+		brownswoodElectric,
 		gangColours_pebbleDash
 	]	
 }
@@ -146,7 +213,7 @@ var burial_raver=  {
 	]
 }
 
-var burial_roughSleeper=  {
+var burial_archangel=  {
 	file:"burial_archangel.mp3",
 	img:"img/galaxies/europe/britain/england/burial_untrue.png",
 	info:"Burial is the stage name of William Bevan, an electronic recording artist from London. His music contains elements of dubstep, 2-step garage, ambient and house music. His eponymous debut album was released in 2006 to critical acclaim. The Wire magazine named it their album of the year, along with achieving fifth place in the Mixmag 2006 Album of the Year list,[5] and eighteenth in the best of the year list of The Observer Music Monthly supplement. Burial's second album, Untrue, was also released to critical acclaim and was the second-highest rated album of 2007, according to the review-collating website, Metacritic.<br/><br/> From <a href='http://en.wikipedia.org/wiki/Burial_(musician)' target='_blank'>Wikipedia</a>",
@@ -229,6 +296,7 @@ var hyperdub = {
 var theBug_skeng={
 	file:"theBug_skeng.mp3",
 	img:"img/galaxies/europe/britain/england/theBug_londonZoo.png",
+	title:"The Bug - Skeng ft. Killa P - Flowdan",
 	info:"The Bug's music draws influence from dancehall, noise, grime, and hip hop. More subtle influences include dubstep and the dubtronica and broken techno of Basic Channel and Pole.<br/><br/>The Bug's first album, Tapping The Conversation, was released in 1997 on the seminal Wordsound label. The album was conceived as an alternative soundtrack to the 1974 Francis Ford Coppola film The Conversation. In this incarnation The Bug consisted of Kevin Martin and DJ Vadim was in more of a downtempo and trip-hop vein.<br/><br/>From 2001-2004 The Bug collaborated with UK reggae soundsystem veteran The Rootsman on a number of limited edition 7-Inch singles, released on the Razor X label. These releases were characterised by their harsh, aggressive nature both musically and vocally (vocal artists including Jamaican MCs such as He-Man and Wayne Lonesome).<br/><br/>The Bug's second album, Pressure was released on Rephlex Records in 2003. It included a number of more ambient, dub-influenced tracks alongside the ragga-tinged onslaughts.<br/><br/>The Razor X singles were compiled on the Killing Sound album (along with newer material) which was released by Rephlex in 2006.<br/><br/>Bug projects have included collaborations with a number of singers and MCs including Cutty Ranks, Flow Dan, Warrior Queen and Ras B. In 2005 he collaborated with Mark Stewart and Keith Levene and has released records on Rephlex, Tigerbeat6 and Klien Records. The Bug produced some radio sessions, including a clash with Soundmurderer on John Peel and a 2006 Breezeblock session with 10 MCs.<br/><br/>In 2006, The Bug launched a monthly London-based reggae club night entitled BASH, in collaboration with dubstep producer Loefah. 2008 saw the release of London Zoo, the third full release from the project, to critical acclaim.<br/><br/> From <a href='http://en.wikipedia.org/wiki/Kevin_Martin_(British_musician)#The_Bug' target='_blank'>Wikipedia</a>",
 	
 	links:[

@@ -1,23 +1,119 @@
 // JavaScript Document
 
 
-var northAmerica
-var southAmerica
-var europe
-var asia
 
+mexico={
+	
+	
+}
+
+
+canada={
+	children:[
+		bieber_beautyAndABeat,
+		theWeeknd_theFall,
+		plastikman_disconnect,
+		caribou_sun,
+		jacquesGreene_tellMe
+		
+	
+	]	
+	
+}
+
+// Need to add Kendrick to LA
+
+
+var northAmerica={
+	
+	children:[
+		la,
+		mexico,
+		canada,
+		nyc
+	
+	]	
+	
+}
 
 /*
 
-EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE EUROPE 
+SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA SOUTH AMERICA 
 
 */
 
+var matiasAguayo_minimal={
+	img:"img/galaxies/europe/germany/kompakt_total9.png",
+	file:"matiasAguayo_minimal.mp3",
+	info:"Matias Aguayo, born 1973 in Santiago de Chile and for many years now simply a citizen of the whole world, is one of the few artist that can nowadays claim true originality in the music they make, offering a unique vision that since its first inception has been challenging the common expectations on electronic music performers and composers.<br/><br/>From <a href='http://www.kompakt.fm/artists/matias_aguayo' target='_blank'>Kompakt.fm</a>",
+	links:[
+		["Kompakt","http://www.kompakt.fm/artists/matias_aguayo"],
+		
+	]
+	
+}
+var matiasAguayo_rollerskate={
+	img:"img/galaxies/europe/germany/kompakt_total11.png",
+	file:"matiasAguayo_rollerskate.mp3",
+	title:"Matias Aguayo - Rollerskate (Sanfuentes & Thunders Version)",
+	info:"Matias Aguayo, born 1973 in Santiago de Chile and for many years now simply a citizen of the whole world, is one of the few artist that can nowadays claim true originality in the music they make, offering a unique vision that since its first inception has been challenging the common expectations on electronic music performers and composers.<br/><br/>From <a href='http://www.kompakt.fm/artists/matias_aguayo' target='_blank'>Kompakt.fm</a>",
+	links:[
+		["Kompakt","http://www.kompakt.fm/artists/matias_aguayo"],
+		
+	]
+	
+}
+var guiBorrato_beautifulLife ={
+	img:"img/galaxies/southAmerica/chromophobia.png",
+	file:"guiBorrato_beautifulLife.mp3",
+	info:"Gui Boratto (born 1974 in São Paulo) is a Brazilian electronic music producer. In the 1990s he was a member of Sect.<br/><br/>His album Chromophobia was awarded the title of Mixmag Album of the Month. Regarding why he chose the name Chromophobia, Boratto said: 'The same meaning as monochromatism in architecture, which means simplicity. That's all. I don't have a morbid fear of colors at all. But also, I was ironic. My music is really colorful.'<br/><br/>From <a href='http://en.wikipedia.org/wiki/Gui_Boratto' target='_blank'>Wikipedia</a>",
+	links:[
+		["Site","http://www.guiboratto.com.br/"]
+	]
+}
+var ricardoVillalobos_whatYouSay= {
+	file:"ricardoVillalobos_whatYouSay.mp3",
+	title:"Ricardo Villalobos - What You Say is More Than I Can Say",
+	 img:"img/galaxies/southAmerica/alcochofa.png",
+	info:"Ricardo Villalobos (born 1970) is a Chilean-German electronic music producer and DJ. He is well known for his work in the minimal techno and microhouse genres, and is one of the most significant figures in today's minimal techno scene. Villalobos was born in Santiago, Chile in 1970. In 1973 he moved to Germany with his family to escape the dictatorship of Augusto Pinochet, who had seized power that year.<br/><br/> From <a href='http://en.wikipedia.org/wiki/Ricardo_Villalobos' target='_blank'>Wikipedia</a>",
+	links:[
+		["Wikipedia","http://en.wikipedia.org/wiki/Ricardo_Villalobos"]
+	],
+}
+var nicolasJaar_colomb= {
+	file:"nicolasJaar_colomb.mp3",
+	 img:"img/galaxies/southAmerica/spaceIsOnlyNoise.png",
+	info:"Nicolas Jaar is an US American-Chilean musician. He studied comparative literature at Brown University, Rhode Island. Jaar is also the owner and founder of his own record label and art house Clown & Sunset.<br/><br/> From <a href='http://en.wikipedia.org/wiki/Nicolas_Jaar' target='_blank'>Wikipedia</a>",
+	links:[
+		["Website","http://www.nicolasjaar.net/"]
+	],
+}
+var nicolasJaar_spaceIsOnlyNoise = {
+	file:"nicolasJaar_spaceIsOnlyNoise.mp3",
+	 img:"img/galaxies/southAmerica/spaceIsOnlyNoise.png",
+	info:"Nicolas Jaar is an US American-Chilean musician. He studied comparative literature at Brown University, Rhode Island. Jaar is also the owner and founder of his own record label and art house Clown & Sunset.<br/><br/> From <a href='http://en.wikipedia.org/wiki/Nicolas_Jaar' target='_blank'>Wikipedia</a>",
+	links:[
+		["Website","http://www.nicolasjaar.net/"]
+	],
+}
 
-
-
-
-
+var southAmerica = {
+	file:"ricardoVillalobos_timemorf.mp3",
+	img:"img/hoverCube.png",
+	links:[
+		["Website","http://bunkai-kei.com/"]
+	],
+	children:[
+		matiasAguayo_minimal,
+		matiasAguayo_rollerskate,
+		guiBorrato_beautifulLife,
+		ricardoVillalobos_whatYouSay,	
+		nicolasJaar_colomb,
+		nicolasJaar_spaceIsOnlyNoise
+	]
+	
+	
+}
 
 
 /*
@@ -27,12 +123,94 @@ ASIA ASIA ASIA ASIA ASIA ASIA ASIA ASIA ASIA ASIA ASIA ASIA ASIA ASIA ASIA ASIA 
 */
 
 
-var emufucka_prygon
-var madegg_miragesPt2
-var sinus_phasma
-var qGhost_fildaeMorph
-var nil_monotone
-var bunkaiKei
+var emufucka_prygon={
+	file:"emufucka_prygon.mp3",
+	img:"img/galaxies/asia/bunkaiKei.png",
+	info:"In the degradation system is regarded as a product of communication rather than a single media works. Because it consists considered as 'work' for the first time to create people who receive it, and bring people, all of these people exist. I would like to hope degradation system in place where you can always outgoing communication between the product of the artist. Where we will create a piece of work people who create content music, video, pictures, text, etc ... various space interact in other words. Such collaboration is also part of the communication. I was born from the desire that the degradation system, you get used to the medium in a form that can provide the best 'work' did so.<br/><br/> From <a href='http://bunkai-kei.com/' target='_blank'>Bunkai - Kei (using google translate)</a>",
+	links:[
+		["Website","http://bunkai-kei.com/"]
+	],
+}
+
+
+var madegg_miragesPt2={
+	file:"madegg_miragesPt2.mp3",
+	title:"Madegg - Mirages Pt.2",
+	img:"img/galaxies/asia/bunkaiKei.png",
+	info:"In the degradation system is regarded as a product of communication rather than a single media works. Because it consists considered as 'work' for the first time to create people who receive it, and bring people, all of these people exist. I would like to hope degradation system in place where you can always outgoing communication between the product of the artist. Where we will create a piece of work people who create content music, video, pictures, text, etc ... various space interact in other words. Such collaboration is also part of the communication. I was born from the desire that the degradation system, you get used to the medium in a form that can provide the best 'work' did so.<br/><br/> From <a href='http://bunkai-kei.com/' target='_blank'>Bunkai - Kei (using google translate)</a>",
+	links:[
+		["Website","http://bunkai-kei.com/"]
+	],
+}
+var qGhost_fildaeMorph={
+	file:"qGhost_fildaeMorph.mp3",
+	title:"Q/Ghost - Felidae Morph",
+	img:"img/galaxies/asia/bunkaiKei.png",
+	info:"In the degradation system is regarded as a product of communication rather than a single media works. Because it consists considered as 'work' for the first time to create people who receive it, and bring people, all of these people exist. I would like to hope degradation system in place where you can always outgoing communication between the product of the artist. Where we will create a piece of work people who create content music, video, pictures, text, etc ... various space interact in other words. Such collaboration is also part of the communication. I was born from the desire that the degradation system, you get used to the medium in a form that can provide the best 'work' did so.<br/><br/> From <a href='http://bunkai-kei.com/' target='_blank'>Bunkai - Kei (using google translate)</a>",
+	links:[
+		["Website","http://bunkai-kei.com/"]
+	],
+}
+var nil_monotone={
+	file:"nil_monotone.mp3",
+	title:"疋田哲也+NIL - Monotone",
+	img:"img/galaxies/asia/bunkaiKei.png",
+	info:"In the degradation system is regarded as a product of communication rather than a single media works. Because it consists considered as 'work' for the first time to create people who receive it, and bring people, all of these people exist. I would like to hope degradation system in place where you can always outgoing communication between the product of the artist. Where we will create a piece of work people who create content music, video, pictures, text, etc ... various space interact in other words. Such collaboration is also part of the communication. I was born from the desire that the degradation system, you get used to the medium in a form that can provide the best 'work' did so.<br/><br/> From <a href='http://bunkai-kei.com/' target='_blank'>Bunkai - Kei (using google translate)</a>",
+	links:[
+		["Website","http://bunkai-kei.com/"]
+	],
+}
+var bunkaiKei ={
+	file:"sinus_phasma.mp3",
+	title:"Bunkai - Kei Records",
+	img:"img/galaxies/asia/bunkaiKei.png",
+	info:"In the degradation system is regarded as a product of communication rather than a single media works. Because it consists considered as 'work' for the first time to create people who receive it, and bring people, all of these people exist. I would like to hope degradation system in place where you can always outgoing communication between the product of the artist. Where we will create a piece of work people who create content music, video, pictures, text, etc ... various space interact in other words. Such collaboration is also part of the communication. I was born from the desire that the degradation system, you get used to the medium in a form that can provide the best 'work' did so.<br/><br/> From <a href='http://bunkai-kei.com/' target='_blank'>Bunkai - Kei (using google translate)</a>",
+	links:[
+		["Website","http://bunkai-kei.com/"]
+		["Music: Sinus - Phasma","http://bunkai-kei.com/"]
+	],
+	
+	
+}
+
+var kyaryPamyuPamyu_ponPonPon = {
+	file:"kyaryPamyuPamyu_ponPonPon.mp3",
+	img:"img/galaxies/asia/ponponPon.png",
+	info:"'PonPonPon' is a song by Japanese pop singer Kyary Pamyu Pamyu. It was released as the lead single for her EP, Moshi Moshi Harajuku, and later included on her debut album, 'Pamyu Pamyu Revolution'. The song was written and produced by Yasutaka Nakata of Capsule. The music video, a psychedelic tribute to kawaisa and Decora culture, was released to YouTube on July 16, 2011 and became a viral hit. As of December 2012, the video has over 41 million views.<br/><br/> From <a href='http://en.wikipedia.org/wiki/PonPonPon' target='_blank'>Wikipedia</a>"	,
+	links:[
+		["Facebook","http://www.facebook.com/KPP.FC"],
+	]
+	
+	
+	
+}
+
+var ametsub_repeatedly={
+	
+	file:"ametsub_repeatedly.mp3",
+	img:"img/galaxies/europe/germany/ametsub_nothingsOfTheNorth_large.png",
+	info:"Ametsub which is active based in Tokyo. His previous album 'The Nothings of The North' (2009) gets a big evaluation from wide listeners of the world. It was chosen as 'the best disk in 2009' of Ryuichi Sakamoto and determined licence-release by Mille-Plateaux and built a firm unique position in the current scene. He achieves appearance on festivals such as SonarSound Tokyo, SummerSonic Festival, NagisaMusic Festivl, 2009-2010&2010-2011 Unit-CountDown Night, TaicoClub Festival Show, DeLaFantasia Festival and he did a live with Yagya and Ruxpin(n5MD) in Laugavegur22, Reykjavik, ICELAND in the summer of 2010. He got result by the activity as DJ also, and he showed the unparalleled musicality such as an endless trip in his live-show and gradually attracted many people and acted with the artists beyond the border such as Plaid, Oval, Fennesz, Jel(Anticon), Vladislav Delay, Floating Points, AtomTM, Moritz Von Oswald, Alva Noto, Tujiko Noriko, DJ Krush and Cornelius. In 2011, he played a live at L.E.V. Festival in Spain with Apparat, Johann Johannson, Lorn, John Hopkins, Sbtrkt and others, it was called the best act live by a review magazine later in spite of a condition bottom surrounded by audience on a lake and he left a large trace. then, he achieves success in Spain tour with Crisopa. His new album for the first time in three years is packed focusing on the musical piece played in his live, and an overpoweringly attractive stretch of his land exists compared with past work. A succession of feeling of floating drifting melodies that seems to remind an endless trip is finished in the strong sound-scape like a drawn spectacular nature, the solemn horizon, the silence of the evening, fluttering reminiscence in the old tape, magnificence red landscape like an album artwork. We can feel a gloom warmth in sense of isolation. He passes various music-style creatively, his album has a many melancholy melodies that are changed faintly by old tape-recorder. The field recordings around the world. Also a new flavor with the prepaid piano sounds are knit. By the beat process closely, beautiful darkness and bold tone echoes sound, The one musicality that can be called the New field is beginning. The music that an infinite view of the world of Ametsub which evolved steadily was expressed in to the next field without being stopped on one place. His enormous individuality and wide strong soundscape widen a fan all over the world.<br/><br/> From <a href='http://www.drizzlecat.org/about/' target='_blank'>Ametsub's Website</a>"	,
+	links:[
+		["Website","http://www.drizzlecat.org/"],
+	]
+	
+}
+var asia={
+	file:"geinoh_mutation.mp3",
+	title:"Asia",
+	 img:"img/hoverCube.png",
+	
+	links:[
+		["Music: Geinoh Yamashirogumi - Mutation","http://en.wikipedia.org/wiki/Geinoh_Yamashirogumi"]
+	],
+	
+	children:[
+		bunkaiKei,
+		ametsub_repeatedly,
+		kyaryPamyuPamyu_ponPonPon	
+	]
+	
+}
 
 
 
@@ -113,16 +291,10 @@ var tinariwen = {
 
 var africa = {
 	  id:"africa",
-	  info:"Including Australia, Indonesia, and other members of the oceanic continent, this is one of the areas of the Universe of Sound that has the most potential for growth. If you know of beautiful beats or majestic melodies that come from Oceania, send them to @cabbibo, and they could be added to this universe",
 	  title:"Africa",
-	  file:"theField_overTheIce.mp3",
+	  file:"tinariwen_assouf.mp3",
 	  img:"img/hoverCube.png",
-	  links:[
-		  ["Ta - Ku","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"]  	  
-	  ],
-	  
-	  
-	  
+	 
 	  color:0xddaa99,
 	  
 	  children:[
