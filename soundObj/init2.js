@@ -1,23 +1,245 @@
 // JavaScript Document
 
 
+secretCircuits_afterlife = {
+	
+	file:"secretCircuits_afterlife.mp3",
+	img:"img/galaxies/northAmerica/ny/afterlife.png",
+	info:"The axis field of SECRET CIRCUIT mixes Psychedelic, and started up as a band inviting one basic member and various guest in the place where free Music was expressed and permanent Cosmic, Jam-Disco, Soul, Funk, and Jazz.<br/><br/>From <a href='http://www.facebook.com/pages/Secret-Circuit/217466344559' target='_blank'>Facebook</a>",
+	
+	links:[
+		["Bandcamp","http://secretcircuit.bandcamp.com/"],
+	],
+
+}
+
+
+maxmillionDunbar_woo = {
+	
+	file:"maxmillionDunbar_woo.mp3",
+	img:"img/galaxies/northAmerica/ny/woo.png",
+	info:"Andrew Field-Pickering's work as Maxmillion Dunbar has ping-ponged through electronic music's vast network of subgenres, hitting zonked-out, late-night house, jumping into rough-edged lo-fi, experimental work and beyond. His latest album, House of Woo (out Feb. 19th on RVNG), is his most gorgeous and full-bodied yet. Field-Pickering's got a massive record collection, and his genuine enthusiasm for electronic music (and really, music as a whole) is unmatched. This Aurora Halal-directed video for 'Loving the Drift' captures that vibe in its all colorful glory, but it's the song that really stands out, with its endless synth washes glide over clipped hi-hats and stuttered bass. It's not minimal, but Field-Pickering never over does it; he lets the track breathe naturally, with a life of its own.<br/><br/>From <a href='http://www.thefader.com/2013/02/07/video-maxmillion-dunbar-loving-the-drift/' target='_blank'>The Fader</a>",
+	
+	links:[
+		["Soundcloud","https://soundcloud.com/maxmilliondunbar"],
+	],
+
+}
+
+hollyHerndon_controlAnd ={
+	
+	file:"hollyHerndon_controlAnd.mp3",
+	img:"img/galaxies/northAmerica/ny/movement.png",
+	info:"Holly Herndon is an artist currently based in San Francisco.<br/><br/>She was recently announced a candidate for doctoral study in Electronic Music at Stanford University, and received her MFA in Electronic Music and Recording Media at Mills College under the guidance of John Bischoff, James Fei, Maggi Payne, and Fred Frith. While at Mills she won the Elizabeth Mills Crothers award for Best Composer in 2010 for her vocal generated piece '195′.<br/><br/>Her musical work explores embodied experience in electronic media through experiments with the electronically processed voice, using extended vocal techniques, vocal processing and FM synthesis.<br/><br/>Her critically acclaimed debut album 'Movement' was released in November 2012 through RVNG Intl.<br/><br/>From <a href='http://hollyherndon.tumblr.com/about' target='_blank'>Holly Herndon</a>",
+	
+	links:[
+		["Website","http://hollyherndon.tumblr.com/"],
+	],
+
+}
+
+
+
+rvng={
+	file:"hollyHerndon_fade.mp3",
+	img:"img/galaxies/northAmerica/ny/rvng.png",
+	info:"It's Revenge without the E's, folks (Dave P ate 'em all the last time in Berlin). Rvng was never meant for what it was originally intended but was always meant well . Or at least to serve as some blaring distraction from what they told us was cool. We don't intend to tell you what's cool 'cus we have no fucking idea. We have friends we support by releasing records and throwing parties every now and again. You're likely to be one 'em if you live outside of this screen and participate in a bigger, radder world. It's ours for the taking, friends. It's ours for Rvng.<br/><br/>From <a href='http://www.igetrvng.com/info/' target='_blank'>RVNG INTL</a>",
+	
+	links:[
+		["Music: Holly Herndon - Fade","http://hollyherndon.tumblr.com/"],
+		["Website","http://www.igetrvng.com/"]
+	],
+	
+	children:[
+		hollyHerndon_controlAnd,
+		maxmillionDunbar_woo,
+		secretCircuit_afterlife
+	]
+
+}
+
+
+
+williamBasinski_disintegration13={
+	file:"williamBasinski_disintegration13.mp3",
+	title:"William Basinski - d|p 1.3 ",
+	img:"img/galaxies/northAmerica/ny/disintegrationIV.png",
+	info:"William Basinski (born 1958) is an avant-garde composer based in New York. He is also a clarinetist, saxophonist, sound artist, and video artist. Basinski is best known for his four-volume album The Disintegration Loops (2002–2003), constructed from rapidly decaying twenty-year-old tapes of his earlier music.<br/><br/>From <a href='http://en.wikipedia.org/wiki/William_Basinski' target='_blank'>Wikipedia</a>",
+	
+	links:[
+		["Website","http://www.mmlxii.com/"]
+	],
+
+}
+
+schoolOfSevenBells_iamundernodisguise={
+	file:"schoolOfSevenBells_iamundernodisguise.mp3",
+	img:"img/galaxies/northAmerica/ny/alpinisms.png",
+	info:"School of Seven Bells formed nearly six years ago, and at the time as a trio: vocalist Alejandra Deheza, guitarist/producer Benjamin Curtis, and ex-vocalist/synth player Claudia Deheza. Curtis and the Deheza sisters met while on tour with their respective bands (Secret Machines and on! air! library!) and within two years dove full time into School of Seven Bells. Their debut album, Alpinisms, hit streets via Ghostly International in 2008 and garnered much attention for the band's eclectic mix of introspective rock and poppy electronic tones. In the years to follow, the trio released the critically acclaimed sophomore full length entitled, Disconnect From Desire (Vagrant Records/Ghostly International) and toured both domestically and internationally with the likes of Interpol, Blonde Redhead, and label-mates Active Child to name a few<br/><br/>From <a href='http://www.sviib.com/biography' target='_blank'>School Of Seven Bells</a>",
+	
+	links:[
+		["Website","http://www.sviib.com/"]
+	],
+	
+		
+	
+}
+
+ezekielHonig_betweenBridges={
+	file:"ezekielHonig_betweenBridges.mp3",
+	img:"img/galaxies/northAmerica/ny/betweenBridges.png",
+	info:"Ezekiel Honig, a New York City native, is a musician and label manager for Microcosm Music and Anticipate Recordings. He is a well-known figure in the electronic music community. Ezekiel Honig usually follows a strict production code on all of his songs. He uses 'found-sound' and warm melodies. Having put out two successful albums in the past, Technology Is Lonely and People, Places & Things, Ezekiel collaborated with fellow friend and musician, Morgan Packard, on Early Morning Migration. Early Morning Migration received positive praise from critics and was a highly successful album within the subgenre. His fourth album, Scattered Practices, was a departure from his earlier work. It was less techno, and more ambient. Ezekiel's most recent album, Surfaces of a Broken Marching Band, was released by Anticipate on October 27, 2008.<br/><br/>From <a href='http://en.wikipedia.org/wiki/Ezekiel_Honig' target='_blank'>Wikipedia</a>",
+	
+	links:[
+		["Website","http://www.ezekielhonig.com/"]
+	],
+	
+		
+	
+}
+
+ny={
+	file:"hollyHerndon_movement.mp3",
+	img:"img/galaxies/northAmerica/ny/ny.png",
+	children:[
+		rvng,
+		ezekielHonig_betweenBridges,
+		schoolOfSevenBells_iamundernodisguise,
+		williamBasinski_disintegration13,
+	],
+	links:[
+		["Music: Holly Herndon - Movement","http://hollyherndon.tumblr.com/"]
+	]
+	
+}
+
+
+//Mexico
+
+mamaTesta_stayUp={
+	file:"mamaTesta_stayUp.mp3",
+	img:"img/galaxies/northAmerica/mexico/stayUp.png",
+	title:"Adrian Be - Stay Up (MΔMΔ TΣSTΔ Remix)",
+	
+	links:[
+		["Soundcloud","https://soundcloud.com/mamatesta"]
+	],
+	
+}
+
+ritualz_muerteMX={
+	file:"ritualz_muerteMX.mp3",
+	img:"img/galaxies/northAmerica/mexico/negativeYouth.png",
+	info:"Muerte, MX is a song about hating Mexico, it's for the people making it a bad place to live: the corrupt, shitty, abusive, evil, mediocre. It's about destroying everyone and everything. Perhaps to rebuild the country afterwards. But since that's impossible (and even if we tried it would probably go wrong) I think of it as science fiction. That connects with the idea behind the music: What does Mexico's final days sound like? It's an apocalyptic pop track. My friend Adriana sings on this one.<br/><br/>From <a href='https://soundcloud.com/rrritualzzz/muerte-mx' target='_blank'>Soundcloud</a>",
+	
+	links:[
+		["Soundcloud","https://soundcloud.com/rrritualzzz"]
+	],
+	
+}
+
+
+analice_humanPotentialMovement={
+	file:"analice_humanPotentialMovement.mp3",
+	img:"img/galaxies/northAmerica/mexico/icepunk2.png",
+	
+	links:[
+		["Soundcloud","https://soundcloud.com/analice"]
+	],
+	
+}
+
 
 mexico={
+	file:"teehnBwitches_mexico.mp3",
+	img:"img/galaxies/northAmerica/mexico/mexico.png",
+	
+	links:[
+		["Music: Teehn Bwitches - Mexico","https://soundcloud.com/teehnbwitches"]
+	],
+	children:[
+		mamaTesta_stayUp,
+		ritualz_muerteMX,
+		analice_humanPotentialMovement
+	]
+}
+
+
+
+var caribou_sun={
+	file:"caribou_sun.mp3",
+	img:"img/galaxies/northAmerica/canada/swim.png",
+	info:"Daniel Victor Snaith (born 1978) is a Canadian composer, musician and recording artist under stage names Caribou, Manitoba and Daphni. In 2005, he obtained a PhD in mathematics at Imperial College London.<br/><br/> From <a href='http://en.wikipedia.org/wiki/Caribou_(musician)' target='_blank'>Wikipedia</a>",
+	
+	links:[
+		["Website","http://www.caribou.fm/"],
+	]
+}
+
+
+var jacquesGreene_tellMe={
+	file:"jacquesGreene_tellMe.mp3",
+	img:"img/galaxies/northAmerica/canada/theLook.png",
+	info:"As our first press releases for this 'enigmatic' 21 years young house producer from Montreal sink their roots deep into the internet we have seen Jacques Greene realise progressively deeper ideas of what House can mean in 2011 with a slew of remixes for the likes of Katy B, Jimmy Edgar and Radiohead that haven't skipped a beat. New artists compete with each other so brutally for press and attention these days. Jacques simply toured, performed, kept in the studio. And with Another Girl all the hype sort of came to him. He came out the gate with two strong records for us and nothing short of an anthem on the Night Slugs Allstars CD and grew like real artists should, with steady high performing releases. As the initial disbelief at how young he was, his love of heart aching RnB, what he looked like and who he used to record as sink further and further back into the pages of Google the initial hype will be succeeded by better and better music, some limited run white labels, a touring analogue live show and a stronger vision from an artist who never really cared bout being the man of the moment. Jacques Greene is here for the long run. This plan was a long time coming.<br/><br/> From <a href='http://thisisluckyme.com/music/jacques-greene/' target='_blank'>Lucky Me</a>",
+	
+	links:[
+		["Lucky Me","http://thisisluckyme.com/music/jacques-greene/"],
+	]
+}
+
+
+plastikman_disconnect={
+	file:"plastikman_disconnect.mp3",
+	img:"img/galaxies/northAmerica/canada/disconnect.png",
+	info:"Richard 'Richie' Hawtin (born June 4, 1970, Banbury, Oxfordshire) is an English-Canadian electronic musician and DJ who was an influential part of Detroit techno's second wave of artists in the early 1990s and a leading exponent of Minimal techno since the mid-1990s. He is best known for his abstract, minimal works under the alias Plastikman, a pseudonym he still uses today.<br/><br/>Hawtin is known for DJing minimal techno sets making use of laptop computers and digital mixing equipment. In May 1990, Hawtin and fellow second-waver John Acquaviva founded the Plus 8 record label, which they named after their turntable's pitch adjust function. In 1998, Hawtin launched Minus records.<br/><br/>From <a href='http://en.wikipedia.org/wiki/Richie_Hawtin' target='_blank'>Wikipedia</a>",
+	
+	links:[
+		["Website","http://www.plastikman.com/"]
+	],
 	
 	
 }
 
 
+theWeeknd_theFall={
+	file:"theWeeknd_theFall.mp3",
+	img:"img/galaxies/northAmerica/canada/echoesOfSilence.png",
+	info:"Abel Tesfaye (born February 16, 1990), known by his stage name The Weeknd, is an Ethiopian-Canadian recording artist and record producer. In late 2010, Tesfaye uploaded several songs to YouTube under the name 'The Weeknd', though his identity was initially unknown. In 2011, he released three nine-track mixtapes: House of Balloons, Thursday, and Echoes of Silence, which were critically acclaimed. In 2012, he released a compilation album, Trilogy, consisting of remastered versions of the mixtape material and three additional songs. It was released under Universal Republic Records, and his own label XO.<br/><br/>From <a href='http://en.wikipedia.org/wiki/The_Weeknd' target='_blank'>Wikipedia</a>",
+	
+	links:[
+		["Website","http://www.theweeknd.com/"]
+	],
+	
+	
+}
+
+bieber_beautyAndABeat={
+	file:"bieber_beautyAndABeat.mp3",
+	img:"img/galaxies/northAmerica/canada/beautyAndABeat.png",
+	info:"'Beauty and a Beat' is a song by Canadian singer Justin Bieber from his third studio album Believe (2012). Max Martin, Anton Zaslavski, and Savan Kotecha wrote the song, with additional lyrics written by Nicki Minaj, who also lent her vocals to the track. It is instrumentally complete with a heavy drum machine and 'rushing' synthesizers. Lyrically, it speaks about Bieber wanting to take his love interest to a club, where they can 'party like it's 3012'. It is the only song from Believe that Bieber did not co-write.<br/><br/>From <a href='http://en.wikipedia.org/wiki/Beauty_and_a_Beat' target='_blank'>Wikipedia</a>",
+	
+	links:[
+		["Website","http://www.justinbiebermusic.com/"]
+	],
+	
+}
+
+
+
+
 canada={
+	file:"theWeeknd_initiation.mp3",
+	img:"img/galaxies/northAmerica/canada/canada.png",
 	children:[
 		bieber_beautyAndABeat,
 		theWeeknd_theFall,
 		plastikman_disconnect,
 		caribou_sun,
-		jacquesGreene_tellMe
-		
-	
-	]	
+		jacquesGreene_tellMe	
+	],
+	links:[
+		["Music: The Weeknd - Initiation","http://www.theweeknd.com/"]
+	],
 	
 }
 
@@ -25,14 +247,21 @@ canada={
 
 
 var northAmerica={
+	file:"kendrickLamar_theArtOfPeerPressure.mp3",
+	
 	
 	children:[
 		la,
 		mexico,
 		canada,
-		nyc
+		ny
 	
-	]	
+	],
+	
+	links:[
+		["Music: Kendrick Lamar - The Art Of Peer Pressure","http://kendricklamar.org/"]
+	],
+	
 	
 }
 
