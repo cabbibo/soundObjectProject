@@ -146,8 +146,8 @@ SOUNDOBJ.prototype = {
 		
 		//First Attempt at 'Z Fighting' by dynamically changing near and far
 		
-		camera.far  = newObj.radius*10
-		camera.near = newObj.radius/1000
+		camera.far  = newObj.radius*3
+		camera.near = newObj.radius/100
 		camera.updateProjectionMatrix();
 		console.log(camera)		
 

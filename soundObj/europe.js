@@ -771,13 +771,24 @@ guiBoratto_annunciacion ={
 	]
 }
 
-var kompakt = {
-	file:"guiBoratto_arquipelago.mp3",
+kompakt = {
+	file:"guiBorrato_arquipelago.mp3",
+	title:"Kompakt",
 	img:"img/galaxies/europe/germany/kompakt.png",
 	info:"Kompakt is a Cologne-based electronic music record label and vinyl/CD distributor, owned by Wolfgang Voigt, Michael Mayer and Jürgen Paape. They specialize in microhouse and minimal techno, and are known for their Total compilation series which reached its eleventh installment in 2010.<br/><br/>Kompakt originated from a techno record store that was opened in Cologne in 1993 (under the name 'Delirium') by Wolfgang Voigt, Reinhard Voigt, Jörg Burger and Jürgen Paape, who were soon joined by Michael Mayer. Kompakt itself was formally founded in 1998, combining several existing labels, the record store and distributor and also event organizing activities.<br/><br/>According to Grooves magazine, 'Kompakt's chief aesthetic objective has always been the perfect marriage of ambient texture and linear 4x4 structure—blending deep, granular sound design with the 4-bar rhythmic intensity and patterning that makes house and techno so club-effective'.Kompakt has been noted for releases enriching abstract techno tracks with pop elements such as vocals - Mayer has stated that 'We grew up with pop music and really like traces of pop in techno music. This is probably Kompakt's biggest strength-- that we can detect these pop traces and give them a home'. British music critic Simon Reynolds has characterized Kompakt as the 'label that's contributed more than any other to Germany's dominance of electronic dance music this decade [the 2000s]'.<br/><br/>From <a href='http://en.wikipedia.org/wiki/Kompakt' target='_blank'>Wikipedia</a>",	
 	links:[
 		["Music: Gui Boratto - Arquipélago","http://www.guiboratto.com.br/"],
 		["Kompakt Site","http://www.kompakt.fm/"]
+	],
+	children:[
+		guiBoratto_annunciacion,
+		theField_theMoreIDoRemix,
+		djKoze_mariposa,
+		coma_sum,
+		voigtVoigt_roxy,
+		supermayer_heartsAMess,
+		scsi9_whenSheSaidGoodbye
+	
 	]
 	
 }
@@ -819,12 +830,17 @@ var ametsub_timeForTrees={
 var millePlateaux={
 	file:"gas_untitled6.mp3",
 	img:"img/galaxies/europe/germany/millePlateaux.png",
+	title:"Mille Plateaux",
 	info:"Mille Plateaux is an influential electronica record label founded 1993 by Achim Szepanski in Frankfurt, Germany. It is known for mostly releasing minimal techno, glitch music and other experimental electronic music.<br/><br/>In early 2004, Mille Plateaux parent company Force Inc. Music Works went bankrupt due to the collapse of Germany's main independent music distributor, EFA-Medien. Mille Plateaux and other Force Inc. Music Works owned labels were folded at that time. The label was revived briefly in late 2004 under the name MillePlateauxMedia, with 4 releases. In 2005, two releases were made by RAI STREUBEL MUSIC S.L. on the label Supralinear with the note 'by Mille Plateaux'.<br/><br/>Mille Plateaux relaunched its activities on May 7, 2010, with three new albums.<br/><br/>The name Mille Plateaux was taken from Mille Plateaux, a philosophy book by Gilles Deleuze and Félix Guattari, published in 1980.<br/><br/> From <a href='http://en.wikipedia.org/wiki/Mille_Plateaux' target='_blank'>Wikipedia</a>"	,
 	
 	children:[
 		ametsub_snowyLava,
 		ametsub_timeForTrees,
 		gas_untitled5,
+	],
+	
+	links:[
+		["Music: Gas - Pop #6","http://en.wikipedia.org/wiki/Gas_(musician)"],
 	]
 	
 }
@@ -887,7 +903,7 @@ var cashmereCat_773Love = {
 	file:"cashmereCat_773Love.mp3",
 	img:"img/galaxies/scandinavia/cashmereCat_773Love.png",
 	links:[
-		["Soundcloud","https://soundcloud.com/cashmerecat"]
+		["Soundcloud","https://soundcloud.com/cashmerecat"],
 		["Facebook","http://www.facebook.com/pages/Cashmere-Cat/114072805335396"]
 	]
 	

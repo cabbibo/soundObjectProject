@@ -193,6 +193,7 @@ var sepalcure_pencilPimp ={
 
 var hotflush ={
 	file:"mountKimbie_carbonated.mp3",
+	title:"Hotflush Recordings",
 	img:"img/galaxies/europe/britain/england/hotflush.png",
 	info:"Hotflush was launched by Paul Rose aka Scuba in 2003 with debut releases from artists including Distance, Boxcutter and Toasty helping to establish the label as a noted platform for musical innovation. Visionary figures like Untold and Shackleton made early turns on the label with vital tracks like 'Just For You' and 'Massacre', while Joy Orbison's 'Hyph Mngo' was not only a massive dancefloor hit but also launched the career of one of the UK's most renowned producers. Over the years Hotflush has proved an consistent incubator of talent, with Mount Kimbie, George FitzGerald, and Sigha amongst others developing on the label's roster, as well as releasing acclaimed albums from the likes of Jimmy Edgar and Sepalcure. And then of course there's Scuba whose three full-lengths released on the label, A Mutual Antipathy, Triangulation and Personality, have been among the past decade's most inventive dance LPs.<br/><br/> From <a href='http://www.hotflushrecordings.com/' target='_blank'>Hotflush Recordings</a>",
 	
@@ -285,6 +286,7 @@ var kingMidasSound_clashnBurn={
 }
 var hyperdub = {
 	file:"burial_dogShelter.mp3",
+	title:"Hyperdub",
 	img:"img/galaxies/europe/britain/england/hyperdub.png",
 	info:"Hyperdub is a London-based record label, founded and run by Steve Goodman, aka Kode9. It was formed in 2004. Artists who have released on Hyperdub include label owner Kode9, Pressure, and Burial. Journalist Martin Clark named Hyperdub as his dubstep label of the year in his 2007 Pitchfork Media roundup, along with listing The Bug and LV's releases amongst his favourite of the same year.<br/><br/> From <a href='http://en.wikipedia.org/wiki/Hyperdub' target='_blank'>Wikipedia</a>",
 	
@@ -357,6 +359,7 @@ var zomby_orchid={
 var ninjaTune = {
 	
 	file:"damMantle_3Colours.mp3",
+	title:"Ninja Tune",
 	img:"img/galaxies/europe/britain/england/ninjatune.png",
 	info:"Ninja Tune is a British independent record label started by DJs Matt Black and Jonathan More, better known as Coldcut and managed by Peter Quicke. The label was one of the first in Britain to consistently embrace and release artists that create and perform new forms of electronic dance music since the 1990s, notably hip hop and breakbeat. The label now releases music of various genres and distributes other record labels, including Big Dada, Brainfeeder, Motion Audio and Counter Records. <br/><br/> From <a href='http://en.wikipedia.org/wiki/Ninja_Tune' target='_blank'>Wikipedia</a>",
 	
@@ -380,7 +383,7 @@ var ninjaTune = {
 
 var england ={
 		file:"burial_gutted.mp3",
-		title:"Britain",
+		title:"England",
 		links:[
 			["Music: Burial - Gutted","http://www.hyperdub.net/artists/view/Burial"],
 		
@@ -512,7 +515,7 @@ var scotland ={
 var britain ={
 	file:"burial_spaceape.mp3",
 	img:"img/galaxies/europe/britain/britain.png",
-	title:"Britain",
+	title:"Great Britain",
 	children:[
 		scotland,
 		england
@@ -650,7 +653,7 @@ FRANCE FRANCE FRANCE FRANCE FRANCE FRANCE FRANCE FRANCE FRANCE FRANCE FRANCE FRA
 
 var justice_helix={
 	img:"img/galaxies/europe/france/justice_audioVisualDisco.png",
-	file:"justice_stress.mp3",
+	file:"justice_helix.mp3",
 	info:"Justice (stylised as Jus†ice) are a French electronic music duo consisting of Gaspard Augé (born 21 May 1979 in Besançon, Doubs) and Xavier de Rosnay (born 2 July 1982 in Ozoir-la-Ferrière, Seine et Marne). The duo is one of the most successful groups on Ed Banger Records and is managed by the label's head, Pedro Winter. Justice is known for incorporating a strong rock and indie influence into their music and image.<br/><br/> From <a href='http://en.wikipedia.org/wiki/Justice_(band)' target='_blank'>Wikipedia</a>",
 	links:[
 		["Wikipedia","http://en.wikipedia.org/wiki/Justice_(band)"]
@@ -757,12 +760,13 @@ coma_sum ={
 	
 }
 djKoze_mariposa ={
-	title:"DJ Koze - Mariposa",
+	
 	file:"djKoze_mariposa.mp3",
-	img:"img/galaxies/europe/germany/kompakt_total8.png",	
+	img:"img/galaxies/europe/germany/kompakt_total8.png",
+	title:"DJ Koze - Mariposa",	
 	info:"The readers of Germany's trend-setting SPEX magazine correctly voted DJ Koze the DJ Of The Years for 1999 - 2004 - a well earned title, playing numerous shows all over the country and in different parts of the world.<br/><br/>From <a href='http://www.residentadvisor.net/dj/djkoze' target='_blank'>Resident Advisor</a>",
 	links:[
-		["Myspace","http://www.myspace.com/djkozeakaadolfnoise"]
+		["Myspace","http://www.myspace.com/djkozeakaadolfnoise"],
 		["Facebook","http://www.facebook.com/djkoze"]
 	
 	]
@@ -773,26 +777,36 @@ theField_theMoreIDoRemix ={
 	info:"Axel Willner is a Swedish electronic music producer and DJ from Stockholm and currently based in Berlin, best known for his critically acclaimed releases as The Field that blend micro-samples of traditional pop songs into his unique brand of atmospheric minimal techno.<br/><br/>From <a href='http://en.wikipedia.org/wiki/The_Field_(musician)' target='_blank'>Wikipedia</a>",
 	img:"img/galaxies/europe/germany/kompakt_total10.png",	
 	links:[
-		["The Field Myspace","http://www.myspace.com/thefieldsthlm"],
 		["Thomas Fehlmann Myspace","http://www.myspace.com/thomasfehlmann"]
 	]
 }
-guiBoratto_annunciacion ={
+guiBoratto_annuciacion ={
 	img:"img/galaxies/europe/germany/kompakt_total9.png",
-	file:"guiBoratto_annunciacion.mp3",
+	file:"guiBoratto_annuciacion.mp3",
 	info:"Gui Boratto (born 1974 in São Paulo) is a Brazilian electronic music producer. In the 1990s he was a member of Sect.<br/><br/>His album Chromophobia was awarded the title of Mixmag Album of the Month. Regarding why he chose the name Chromophobia, Boratto said: 'The same meaning as monochromatism in architecture, which means simplicity. That's all. I don't have a morbid fear of colors at all. But also, I was ironic. My music is really colorful.'<br/><br/>From <a href='http://en.wikipedia.org/wiki/Gui_Boratto' target='_blank'>Wikipedia</a>",
 	links:[
 		["Site","http://www.guiboratto.com.br/"]
 	]
 }
 
-var kompakt = {
-	file:"guiBoratto_arquipelago.mp3",
+kompakt = {
+	file:"guiBorrato_arquipelago.mp3",
+	title:"Kompakt",
 	img:"img/galaxies/europe/germany/kompakt.png",
 	info:"Kompakt is a Cologne-based electronic music record label and vinyl/CD distributor, owned by Wolfgang Voigt, Michael Mayer and Jürgen Paape. They specialize in microhouse and minimal techno, and are known for their Total compilation series which reached its eleventh installment in 2010.<br/><br/>Kompakt originated from a techno record store that was opened in Cologne in 1993 (under the name 'Delirium') by Wolfgang Voigt, Reinhard Voigt, Jörg Burger and Jürgen Paape, who were soon joined by Michael Mayer. Kompakt itself was formally founded in 1998, combining several existing labels, the record store and distributor and also event organizing activities.<br/><br/>According to Grooves magazine, 'Kompakt's chief aesthetic objective has always been the perfect marriage of ambient texture and linear 4x4 structure—blending deep, granular sound design with the 4-bar rhythmic intensity and patterning that makes house and techno so club-effective'.Kompakt has been noted for releases enriching abstract techno tracks with pop elements such as vocals - Mayer has stated that 'We grew up with pop music and really like traces of pop in techno music. This is probably Kompakt's biggest strength-- that we can detect these pop traces and give them a home'. British music critic Simon Reynolds has characterized Kompakt as the 'label that's contributed more than any other to Germany's dominance of electronic dance music this decade [the 2000s]'.<br/><br/>From <a href='http://en.wikipedia.org/wiki/Kompakt' target='_blank'>Wikipedia</a>",	
 	links:[
 		["Music: Gui Boratto - Arquipélago","http://www.guiboratto.com.br/"],
 		["Kompakt Site","http://www.kompakt.fm/"]
+	],
+	children:[
+		guiBoratto_annuciacion,
+		theField_theMoreIDoRemix,
+		djKoze_mariposa,
+		coma_sum,
+		voigtVoigt_roxy,
+		supermayer_heartsAMess,
+		scsi9_whenSheSaidGoodbye
+	
 	]
 	
 }
@@ -834,12 +848,17 @@ var ametsub_timeForTrees={
 var millePlateaux={
 	file:"gas_untitled6.mp3",
 	img:"img/galaxies/europe/germany/millePlateaux.png",
+	title:"Mille Plateaux",
 	info:"Mille Plateaux is an influential electronica record label founded 1993 by Achim Szepanski in Frankfurt, Germany. It is known for mostly releasing minimal techno, glitch music and other experimental electronic music.<br/><br/>In early 2004, Mille Plateaux parent company Force Inc. Music Works went bankrupt due to the collapse of Germany's main independent music distributor, EFA-Medien. Mille Plateaux and other Force Inc. Music Works owned labels were folded at that time. The label was revived briefly in late 2004 under the name MillePlateauxMedia, with 4 releases. In 2005, two releases were made by RAI STREUBEL MUSIC S.L. on the label Supralinear with the note 'by Mille Plateaux'.<br/><br/>Mille Plateaux relaunched its activities on May 7, 2010, with three new albums.<br/><br/>The name Mille Plateaux was taken from Mille Plateaux, a philosophy book by Gilles Deleuze and Félix Guattari, published in 1980.<br/><br/> From <a href='http://en.wikipedia.org/wiki/Mille_Plateaux' target='_blank'>Wikipedia</a>"	,
 	
 	children:[
 		ametsub_snowyLava,
 		ametsub_timeForTrees,
 		gas_untitled5,
+	],
+	
+	links:[
+		["Music: Gas - Pop #6","http://en.wikipedia.org/wiki/Gas_(musician)"],
 	]
 	
 }
@@ -902,7 +921,7 @@ var cashmereCat_773Love = {
 	file:"cashmereCat_773Love.mp3",
 	img:"img/galaxies/europe/scandinavia/cashmereCat_773Love.png",
 	links:[
-		["Soundcloud","https://soundcloud.com/cashmerecat"]
+		["Soundcloud","https://soundcloud.com/cashmerecat"],
 		["Facebook","http://www.facebook.com/pages/Cashmere-Cat/114072805335396"]
 	]
 	
@@ -1654,7 +1673,7 @@ var bunkaiKei ={
 	img:"img/galaxies/asia/bunkaiKei.png",
 	info:"In the degradation system is regarded as a product of communication rather than a single media works. Because it consists considered as 'work' for the first time to create people who receive it, and bring people, all of these people exist. I would like to hope degradation system in place where you can always outgoing communication between the product of the artist. Where we will create a piece of work people who create content music, video, pictures, text, etc ... various space interact in other words. Such collaboration is also part of the communication. I was born from the desire that the degradation system, you get used to the medium in a form that can provide the best 'work' did so.<br/><br/> From <a href='http://bunkai-kei.com/' target='_blank'>Bunkai - Kei (using google translate)</a>",
 	links:[
-		["Website","http://bunkai-kei.com/"]
+		["Website","http://bunkai-kei.com/"],
 		["Music: Sinus - Phasma","http://bunkai-kei.com/"]
 	],
 	
@@ -1842,7 +1861,7 @@ var europe={
 	  dust:{
 		  pNum:200,
 		  fNum:20,
-		  pPosition: dustLib.pPosition.randomBox(1000000),
+		  pPosition: dustLib.pPosition.randomBox(100000),
 		  pMaterial: dustLib.pMaterial.colorAdditive(0xc0ffee,1000),
 		  fPosition: dustLib.fPosition.randomBox(500000),
 		  fRotation: dustLib.fRotation.noRotation(),
@@ -1896,7 +1915,7 @@ var northAmerica={
 	  dust:{
 		  pNum:200,
 		  fNum:20,
-		  pPosition: dustLib.pPosition.randomBox(1000000),
+		  pPosition: dustLib.pPosition.randomBox(100000),
 		  pMaterial: dustLib.pMaterial.colorAdditive(0xc0ffee,1000),
 		  fPosition: dustLib.fPosition.randomBox(500000),
 		  fRotation: dustLib.fRotation.noRotation(),
@@ -1916,7 +1935,7 @@ var northAmerica={
 	  
 	  ],
 	  
-	  radius:400000,
+	  radius:500000,
 	  
 	  position:{
 		  x:0,
@@ -1932,8 +1951,9 @@ var northAmerica={
 var southAmerica = {
 	file:"ricardoVillalobos_timemorf.mp3",
 	img:"img/hoverCube.png",
+	title:"South America",
 	links:[
-		["Website","http://bunkai-kei.com/"]
+		["Music: Ricardo Villalobos - Timemorf","http://en.wikipedia.org/wiki/Ricardo_Villalobos"]
 	],
 	children:[
 		matiasAguayo_minimal,
@@ -1948,7 +1968,7 @@ var southAmerica = {
 	  dust:{
 		  pNum:200,
 		  fNum:20,
-		  pPosition: dustLib.pPosition.randomBox(1000000),
+		  pPosition: dustLib.pPosition.randomBox(100000),
 		  pMaterial: dustLib.pMaterial.colorAdditive(0xc0ffee,1000),
 		  fPosition: dustLib.fPosition.randomBox(500000),
 		  fRotation: dustLib.fRotation.noRotation(),
@@ -1999,7 +2019,7 @@ var asia={
 	  dust:{
 		  pNum:200,
 		  fNum:20,
-		  pPosition: dustLib.pPosition.randomBox(1000000),
+		  pPosition: dustLib.pPosition.randomBox(100000),
 		  pMaterial: dustLib.pMaterial.colorAdditive(0xc0ffee,1000),
 		  fPosition: dustLib.fPosition.randomBox(500000),
 		  fRotation: dustLib.fRotation.noRotation(),
@@ -2055,7 +2075,7 @@ var oceania = {
 	  dust:{
 		  pNum:200,
 		  fNum:20,
-		  pPosition: dustLib.pPosition.randomBox(1000000),
+		  pPosition: dustLib.pPosition.randomBox(100000),
 		  pMaterial: dustLib.pMaterial.colorAdditive(0xc0ffee,1000),
 		  fPosition: dustLib.fPosition.randomBox(500000),
 		  fRotation: dustLib.fRotation.noRotation(),
@@ -2106,7 +2126,7 @@ var africa = {
 	  dust:{
 		  pNum:200,
 		  fNum:20,
-		  pPosition: dustLib.pPosition.randomBox(1000000),
+		  pPosition: dustLib.pPosition.randomBox(100000),
 		  pMaterial: dustLib.pMaterial.colorAdditive(0xddaa99,1000),
 		  fPosition: dustLib.fPosition.randomBox(500000),
 		  fRotation: dustLib.fRotation.noRotation(),
