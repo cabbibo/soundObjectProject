@@ -18,6 +18,7 @@ var lightLib = {
 			
 	},
 
+
 	marker:{
 		sphere: new THREE.SphereGeometry( 100, 16, 8 )
 	},
@@ -223,8 +224,37 @@ var lightLib = {
 				r:function(whichSoundObj,freqData,binCount,n){return (freqData/1000)},
 				g:function(whichSoundObj,freqData,binCount,n){return (freqData/1000)},
 				b:function(whichSoundObj,freqData,binCount,n){return (freqData/1000)},
-			}
+			},
 			
+			
+			
+			color:{
+				r:function(whichSoundObj,freqData,binCount,n){
+						
+						if(n%3==0){	
+							return (whichSoundObj.color.r/2-((freqData/1000)*(whichSoundObj.color.r)))
+						}else{
+							return (whichSoundObj.color.r/2)
+						}
+					
+					},
+				g:function(whichSoundObj,freqData,binCount,n){
+						if(n%3==1){	
+							return (whichSoundObj.color.g/2-((freqData/1000)*(whichSoundObj.color.g)))
+						}else{
+							return(whichSoundObj.color.g/2)
+						}
+					
+					},
+				b:function(whichSoundObj,freqData,binCount,n){
+						if(n%3==2){	
+							return (whichSoundObj.color.b/2-((freqData/1000)*(whichSoundObj.color.b)))
+						}else{
+							return(whichSoundObj.color.b/2)
+						}
+					
+					},
+			},
 			
 			
 		}

@@ -8,7 +8,7 @@
 
 
 //This is teh sound object we are currently within rang of
-window.current 
+window.current = null
 
 window.soundObjArray = []
 
@@ -197,38 +197,82 @@ window.getCamPos = function(){
 		var cameraDirection = getCamDir();
 		
 		camera.direction = cameraDirection
-		
+		//console.log(current)
 		//TODO: MAKE CONTROL PANEL WHERE THE USER CAN SEE ALL OF THIS INFORMATION
-		$("#cameraPos").html("POLAR:|   "+
+		//var current
+		//console.log(current)
+		if(current == null){
+			$("#cameraPos").html("POLAR:|   "+
 			camera.position.r.toFixed(2)
-			+"   |   "+
-			camera.position.t.toFixed(2)
-			+"  |  "+
-			camera.position.p.toFixed(2)
-			+"  |  <br/> CART:|"+
-			camera.position.x.toFixed(2)
-			+"  |  "+
-			camera.position.y.toFixed(2)
-			+"  |  "+
-			camera.position.z.toFixed(2)
-			//+"  |  <br/> DISTANCE FROM CLUSTERS:|"+
-			//dFromClusters
-			+" <br/> DIRECTION OF CAMERA: |"+
-			camera.direction.front.x.toFixed(2)
-			+"  |  "+
-			camera.direction.front.y.toFixed(2)
-			+"  |  "+
-			camera.direction.front.z.toFixed(2)
-			+"  |  "
-			+" <br/> DIRECTION OF UP CAMERA: |"+
-			camera.direction.up.x.toFixed(2)
-			+"  |  "+
-			camera.direction.up.y.toFixed(2)
-			+"  |  "+
-			camera.direction.up.z.toFixed(2)
-			+"  |  "
+				+"   |   "+
+				camera.position.t.toFixed(2)
+				+"  |  "+
+				camera.position.p.toFixed(2)
+				+"  |  <br/> CART:|"+
+				camera.position.x.toFixed(2)
+				+"  |  "+
+				camera.position.y.toFixed(2)
+				+"  |  "+
+				camera.position.z.toFixed(2)
+				+" <br/> zNear: |"+
+				camera.near
+				+" <br/> zFar: |"+
+				camera.far
+			
 			)
-		
+		}else{
+			
+			if(current.objects.planets && current.objects.planets.data.scale){
+				
+					
+					$("#cameraPos").html("POLAR:|   "+
+						camera.position.r.toFixed(2)
+						+"   |   "+
+						camera.position.t.toFixed(2)
+						+"  |  "+
+						camera.position.p.toFixed(2)
+						+"  |  <br/> CART:|"+
+						camera.position.x.toFixed(2)
+						+"  |  "+
+						camera.position.y.toFixed(2)
+						+"  |  "+
+						camera.position.z.toFixed(2)
+						+" <br/> zNear: |"+
+						camera.near
+						+" <br/> zFar: |"+
+						camera.far 
+						+" <br/> current.scene.scale: |"+
+						current.scene.scale.x
+						+" <br/> planets scale: |"+
+						current.objects.planets.array[0].scale.x
+					)	
+			
+			
+				
+			}else{
+				$("#cameraPos").html("POLAR:|   "+
+					camera.position.r.toFixed(2)
+					+"   |   "+
+					camera.position.t.toFixed(2)
+					+"  |  "+
+					camera.position.p.toFixed(2)
+					+"  |  <br/> CART:|"+
+					camera.position.x.toFixed(2)
+					+"  |  "+
+					camera.position.y.toFixed(2)
+					+"  |  "+
+					camera.position.z.toFixed(2)
+					+" <br/> zNear: |"+
+					camera.near
+					+" <br/> zFar: |"+
+					camera.far 
+					+" <br/> current.scene.scale: |"+
+					current.scene.scale.x
+				)	
+			}
+			
+			
+		}
 		
 }
 

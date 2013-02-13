@@ -8,7 +8,9 @@
 	random galaxy creation
 
 
-
+	TODO
+	
+	figure out planet rotation screw up!
 */
 
 
@@ -55,6 +57,9 @@ createTheme = function(whichObj){
 			}else if(whichObj.theme == 'cube'){
 				whichObj.planets.numOf =(Math.ceil(Math.random()*5) + 3) * 8
 				
+			}else if(whichObj.theme == 'tetrahedron'){
+				whichObj.planets.numOf =(Math.ceil(Math.random()*5) + 3) * 6
+				
 			}else{
 				whichObj.planets.numOf = Math.ceil(Math.random()*35)+5
 			}
@@ -64,7 +69,7 @@ createTheme = function(whichObj){
 		if(!whichObj.planets.type){
 			
 			if(whichObj.theme == 'egg'  || whichObj.theme == 'spiral' || whichObj.theme == 'present' ){
-				var range = (Math.random()*(whichObj.radius/10))+whichObj.radius/15
+				var range = (Math.random()*(whichObj.radius/10))+whichObj.radius/10
 				var type = planetLib.randomType((range))
 				whichObj.planets.type = type.type	
 				whichObj.planets.dataType = type.dataType
@@ -72,7 +77,7 @@ createTheme = function(whichObj){
 					whichObj.planets.scale = type.scale	
 				}
 			}else if(whichObj.theme == 'cube' || whichObj.theme == 'tetrahedron' ){
-				var range = (Math.random()*(whichObj.radius/8))+whichObj.radius/8
+				var range = (Math.random()*(whichObj.radius/10))+whichObj.radius/15
 				var type = planetLib.randomType((range))  
 				whichObj.planets.type = type.type	
 				whichObj.planets.dataType = type.dataType
@@ -80,7 +85,7 @@ createTheme = function(whichObj){
 					whichObj.planets.scale = type.scale	
 				}
 			}else if(whichObj.theme == 'ring'){
-				var type = planetLib.randomType((whichObj.radius/4))    
+				var type = planetLib.randomType((whichObj.radius/8))    
 				whichObj.planets.type = type.type	
 				whichObj.planets.dataType = type.dataType
 				if(type.scale){
@@ -101,9 +106,10 @@ createTheme = function(whichObj){
 		
 		
 		if(!whichObj.planets.material){
-			var materialRandom = Math.floor((Math.random()*2))
+			var materialRandom = Math.floor((Math.random()*1))
+			materialRandom = 0
 			if(materialRandom == 1){
-				whichObj.planets.material = planetLib.material.normal()//colorNormal(whichObj.color)
+				whichObj.planets.material = planetLib.material.colorNormal(whichObj.color)
 			}else{
 				whichObj.planets.material = planetLib.material.imgMaterial(whichObj.img)	
 				if(!whichObj.lights){
@@ -111,17 +117,17 @@ createTheme = function(whichObj){
 					//Create different Light Placing for different types
 					if(whichObj.theme == 'egg'){
 						whichObj.lights = {}
-						whichObj.lights.type = lightLib.type.point(whichObj.color,3,whichObj.radius*10)
+						whichObj.lights.type = lightLib.type.point(whichObj.color,3,whichObj.radius*100)
 						whichObj.lights.numOf = 5
 						whichObj.lights.position = lightLib.position.randomSphere(whichObj.radius*1.5);
 					}else if(whichObj.theme == 'ring'){
 						whichObj.lights = {}
-						whichObj.lights.type = lightLib.type.point(whichObj.color,3,whichObj.radius*10)
+						whichObj.lights.type = lightLib.type.point(whichObj.color,3,whichObj.radius*100)
 						whichObj.lights.numOf = 5
 						whichObj.lights.position = lightLib.position.randomSphere(whichObj.radius*1);
 					}else{
 						whichObj.lights = {}
-						whichObj.lights.type = lightLib.type.point(whichObj.color,3,whichObj.radius*10)
+						whichObj.lights.type = lightLib.type.point(whichObj.color,3,whichObj.radius*100)
 						whichObj.lights.numOf = 5
 						whichObj.lights.position = lightLib.position.randomSphere(whichObj.radius*1);
 					}
@@ -191,13 +197,15 @@ createTheme = function(whichObj){
 				whichObj.suns.dataType = type.dataType
 				
 			}else if(whichObj.theme =='ring' || whichObj.theme == 'cube' || whichObj.theme == 'tetrahedron' || whichObj.theme == 'spiral'){
-				var randomSolid = Math.floor(Math.random()*2)
-				var type = planetLib.randomType(whichObj.radius/20)
+				
+				var range = (Math.random()*(whichObj.radius/10))+whichObj.radius/15
+				var type = planetLib.randomType(range)
 				whichObj.suns.type = type.type	
 				whichObj.suns.dataType = type.dataType
 			}else{
-			 	var randomSolid = Math.floor(Math.random()*2)
-				var type = planetLib.randomType(Math.random() * whichObj.radius)
+			 	
+				var range = (Math.random()*(whichObj.radius/10))+whichObj.radius/15
+				var type = planetLib.randomType(range)
 				whichObj.suns.type = type.type	
 				whichObj.suns.dataType = type.dataType
 			}
@@ -205,6 +213,7 @@ createTheme = function(whichObj){
 		
 		if(!whichObj.suns.material){
 			var materialRandom = Math.floor((Math.random()*2))
+			materialRandom = 0
 			if(materialRandom == 1){
 				whichObj.suns.material = planetLib.material.colorNormal(whichObj.color)
 			}else{
@@ -212,17 +221,17 @@ createTheme = function(whichObj){
 				if(!whichObj.lights){
 					if(whichObj.theme == 'egg'){
 						whichObj.lights = {}
-						whichObj.lights.type = lightLib.type.point(whichObj.color,3,whichObj.radius*10)
+						whichObj.lights.type = lightLib.type.point(whichObj.color,3,whichObj.radius*100)
 						whichObj.lights.numOf =10
 						whichObj.lights.position = lightLib.position.randomSphere(4*whichObj.radius);	
 					}else if(whichObj.theme == 'ring'){
 						whichObj.lights = {}
-						whichObj.lights.type = lightLib.type.point(whichObj.color,3,whichObj.radius*10)
+						whichObj.lights.type = lightLib.type.point(whichObj.color,3,whichObj.radius*100)
 						whichObj.lights.numOf =10
 						whichObj.lights.position = lightLib.position.randomSphere(4*whichObj.radius);	
 					}else{
 						whichObj.lights = {}
-						whichObj.lights.type = lightLib.type.point(whichObj.color,3,whichObj.radius*10)
+						whichObj.lights.type = lightLib.type.point(whichObj.color,3,whichObj.radius*100)
 						whichObj.lights.numOf =10
 						whichObj.lights.position = lightLib.position.randomSphere(4*whichObj.radius);	
 					}
@@ -351,6 +360,15 @@ createTheme = function(whichObj){
 				randomVis = dustLib.randomVis()
 			}
 			whichObj.sections[0].dust = randomVis
+		}
+		
+		//If there are lights, visualize those suckers
+		if(!whichObj.sections[0].light && whichObj.lights){
+			
+				whichObj.sections[0].light={}
+			//randomVis = lightLib.randomVis()
+			whichObj.sections[0].light.color = lightLib.visual.color.color
+			
 		}
 		
 		
@@ -495,8 +513,8 @@ planetLib.vertexArray = [
 
 planetLib.rotationArray = [
 	planetLib.visual.rotation.freqRotX, 
-	planetLib.visual.rotation.freqXcamZ,
-	planetLib.visual.rotation.camPosX,
+	planetLib.visual.rotation.freqXcamZ,	
+	planetLib.visual.rotation.camPosX,		
 	planetLib.visual.rotation.nCamPosX,
 	planetLib.visual.rotation.camPosY,
 	planetLib.visual.rotation.camPosZ,
@@ -625,13 +643,14 @@ sunLib.randomVis = function(){
 		toReturn.vertex = sunLib.vertexArray[vertex]
 	}
 	
-	//if(sunLib.rotationArray[rotation]){
-	//	toReturn.rotation = sunLib.rotationArray[rotation]
-	//}
+	if(sunLib.rotationArray[rotation]){
+		toReturn.rotation = sunLib.rotationArray[rotation]
+	}
 	
-	//if(sunLib.positionArray[position]){
-	//	toReturn.position = sunLib.positionArray[position]
-	//}
+	//Never really want to move the suns position, thats what makes is a sun !
+	/*if(sunLib.positionArray[position]){
+		toReturn.position = sunLib.positionArray[position]
+	}*/
 	
 	return toReturn	
 }
@@ -843,3 +862,7 @@ dustLib.randomVis = function(){
 	
 	return toReturn	
 }
+
+
+
+

@@ -8,7 +8,7 @@ SECTION.prototype = {
 			var functionToReturn = function(freqData,binCount,n){
 				for(i=0;i<whichObj.objects.lights.array.length;i++){
 					if(n==i){
-					  
+					
 						if(params.position){
 							whichObj.objects.lights.array[i].position.x = params.position.x(whichObj,freqData,binCount,n)
 							whichObj.objects.lights.array[i].position.y = params.position.y(whichObj,freqData,binCount,n)
@@ -23,6 +23,7 @@ SECTION.prototype = {
 					  
 					  
 					  	if(params.color){
+							
 						  	whichObj.objects.lights.array[i].color.r = params.color.r(whichObj,freqData,binCount,n)
 						  	whichObj.objects.lights.array[i].color.g = params.color.g(whichObj,freqData,binCount,n)	
 						  	whichObj.objects.lights.array[i].color.b = params.color.b(whichObj,freqData,binCount,n)		
@@ -101,7 +102,9 @@ SECTION.prototype = {
 				var scale = 1
 				if(planet.scale){
 					//console.log('scaled')
-					scale = 1/planet.scale.x	
+					
+					scale = 1/planet.scale.x
+					
 				}
 				
 				if(params.vertex){
@@ -151,6 +154,11 @@ SECTION.prototype = {
 				}
 			
 				var sun=whichObj.objects.suns.array[0]
+				var scale = 1
+				if(sun.scale){
+					//console.log('scaled')
+					scale = 1/sun.scale.x	
+				}
 
 				if(params.vertex){
 					//This area controls the actual verticies of the sound objs

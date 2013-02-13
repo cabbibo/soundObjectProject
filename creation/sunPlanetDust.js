@@ -201,6 +201,7 @@ function LIGHTS(whichSoundObj, lightParameters){
 	
 	this.whichSoundObj = whichSoundObj
 	this.array =[]
+	this.dataArray =[]
 	
 	for(var i = 0; i<lightParameters.numOf; i++){
 		
@@ -225,6 +226,28 @@ function LIGHTS(whichSoundObj, lightParameters){
 	
 		
 		this.array.push(newLight)	
+		
+		var newDataLight = lightParameters.type
+		if(lightParameters.color){
+			newDataLight.color.r = 	 lightParameters.color.r
+			newDataLight.color.g = 	 lightParameters.color.g
+			newDataLight.color.b = 	 lightParameters.color.b
+		}
+	
+		var position = lightParameters.position(i)
+	
+		
+		if(lightParameters.direction){
+			var direction = lightParameters.direction(i)
+		}
+		
+		newDataLight.position.x = position.x
+		newDataLight.position.y = position.y
+		newDataLight.position.z = position.z
+		
+	
+		
+		this.dataArray.push(newDataLight)	
 		
 		
 	}

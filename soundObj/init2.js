@@ -31,15 +31,6 @@ var gangColours_pebbleDash={
 	
 }
 
-
-var bmb_labyrinth={
-	img:"img/galaxies/europe/britain/england/brownswoodElectric.png",
-	file:"bmb_labyrinth.mp3",
-	title:"BMBxSpacekid - Labyrinth",	
-	links:[
-		["Bandcamp","http://spacekid.bandcamp.com/"],
-	],
-}
 var lostTwin_nothing={
 	img:"img/galaxies/europe/britain/england/brownswoodElectric.png",
 	file:"lostTwin_nothing.mp3",	
@@ -53,22 +44,6 @@ var theRisks_tooManyYChromosomes={
 	links:[
 		["Soundcloud","https://soundcloud.com/monolithiummm/risks-y-chromosomes"],
 	],
-}
-var brownswoodElectric={
-	img:"img/galaxies/europe/britain/england/brownswoodElectric.png",
-	file:"djurm_lies.mp3",	
-	links:[
-		["Music: Djurm - Lies (Ft. Shadowbox)","https://soundcloud.com/djrum"],
-		["Gilles Peterson - Electr*c","http://www.gillespetersonworldwide.com/category/electric/"]
-	],
-	 
-	children:[
-		bmb_labyrinth,
-		lostTwin_nothing,
-		theRisks_tooManyYChromosomes
-	
-	]
-		
 }
 
 var docDaneeka_tobyjug={
@@ -95,17 +70,6 @@ var groundislava_creeperShit={
 	 
 }
 
-var monopoly_withGrace={
-	
-	file:"monopoly_withGrace.mp3",
-	img:"img/galaxies/europe/britain/england/worldwideFamily.png",
-	info:"Charles Dickerson is a Los Angeles based electronic music producer known by the stage name Mono/Poly. His music alias is taken from the 1980s Korg keyboard and symbolizes the artist's multifaceted audio productions. He is often known for his experimental and multi-genre producing of astral soundscapes with glitch-based hip-hop. <br/><br/> From <a href='http://en.wikipedia.org/wiki/Mono/Poly' target='_blank'>Wikipedia</a>",
-	
-	links:[
-		["Myspace","http://www.myspace.com/monopolytracks"],
-	],
-	 
-}
 
 var esmk_bluntHopes ={
 	
@@ -120,28 +84,10 @@ var esmk_bluntHopes ={
 }
 
 
-var kutmah_worldwideFamily ={
-	
-	file:"samiyam_medallion.mp3",
-	img:"img/galaxies/europe/britain/england/worldwideFamily.png",
-	info:"L.A expat Kutmah has gained an almost cult-like reputation for his endeavors, an accolade which was long overdue, frankly. Deported from the U.S, his 'A New Error' volumes released last year contained a thoughtful, broad spectrum of influences, showcasing not only his penchant for selection, crate digging and mixing but consequently some of the best-unreleased material from his peers. This was all on top of being an NTS host and a visual artist, as well as an occasional producer.<br/><br/> From <a href='http://www.inverted-audio.com/kutmah-presents-worldwide-family-vol-2/' target='_blank'>Inverted Audio</a>",
-	
-	links:[
-		["Music: Samiyam - Medallion","http://www.facebook.com/pages/Samiyam/194681980556546"],
-	],
-	 
-	children:[
-		docDaneeka_tobyjug,
- 		groundislava_creeperShit,
- 		monopoly_withGrace,
- 		esmk_bluntHopes,
-	
-	]
-}
-
 var brownswood={
 	
 	file:"lapti_leavingHome.mp3",
+	title:"Brownswood Recordings",
 	img:"img/galaxies/europe/britain/england/brownswood.png",
 	info:"Brownswood Recordings is the independent label belonging to the DJ and broadcaster Gilles Peterson. Founded in 2006 the aim of the label was to provide a platform for the many unsigned artists that were sending their music to Gilles to play on his late night BBC Radio 1 show.<br/><br/> From <a href='http://www.gillespetersonworldwide.com/brownswood-recordings/' target='_blank'>Gilles Peterson Worldwide</a>",
 	
@@ -151,8 +97,11 @@ var brownswood={
 	],
 	
 	children:[
-		kutmah_worldwideFamily,
-		brownswoodElectric,
+		esmk_bluntHopes,	
+		groundislava_creeperShit,
+		docDaneeka_tobyjug,
+		lostTwin_nothing,
+		theRisks_tooManyYChromosomes,
 		gangColours_pebbleDash
 	]	
 }
@@ -171,7 +120,7 @@ var scuba_adrenalin = {
 
 
 var mountKimbie_blindNightErrand = {
-	file:"sepalcure_pencilPimp.mp3",
+	file:"mountKimbie_blindNightErrand.mp3",
 	img:"img/galaxies/europe/britain/england/mountKimbie_crooksLovers.png",
 	info:"Mount Kimbie is a British electronic music duo consisting of Dominic Maker and Kai Campos. They formed the group in London in 2008 and released their debut album Crooks & Lovers on 19 June 2010 in the UK to critical acclaim. Mount Kimbie are currently working on their second album which will be released on Warp Records.<br/><br/> From <a href='http://en.wikipedia.org/wiki/Sepalcure' target='_blank'>Wikipedia</a>",
 	
@@ -244,23 +193,7 @@ var burial_roughSleeper=  {
 }
 
 
-var burial = {
-	file:"burial_stolenDog.mp3",
-	img:"img/galaxies/europe/britain/england/burial.png",
-	title:"Burial",
-	info:"Burial is the stage name of William Bevan, an electronic recording artist from London. His music contains elements of dubstep, 2-step garage, ambient and house music. His eponymous debut album was released in 2006 to critical acclaim. The Wire magazine named it their album of the year, along with achieving fifth place in the Mixmag 2006 Album of the Year list, and eighteenth in the best of the year list of The Observer Music Monthly supplement. Burial's second album, Untrue, was also released to critical acclaim and was the second-highest rated album of 2007, according to the review-collating website, Metacritic.<br/><br/> From <a href='http://en.wikipedia.org/wiki/Burial_(musician)' target='_blank'>Wikipedia</a>",
-	
-	links:[
-		["Music: Burial - Stolen Dog", "http://www.hyperdub.net/artists/view/Burial"]
-	],
-		
-	children:[
-		burial_roughSleeper,
-		burial_archangel,
-		burial_raver
-	]
-	
-}
+
 var kode9_distantLightsRemix={
 	file:"kode9_distantLightsRemix.mp3",
 	img:"img/galaxies/europe/britain/england/burial_distantLights.png",
@@ -291,14 +224,18 @@ var hyperdub = {
 	info:"Hyperdub is a London-based record label, founded and run by Steve Goodman, aka Kode9. It was formed in 2004. Artists who have released on Hyperdub include label owner Kode9, Pressure, and Burial. Journalist Martin Clark named Hyperdub as his dubstep label of the year in his 2007 Pitchfork Media roundup, along with listing The Bug and LV's releases amongst his favourite of the same year.<br/><br/> From <a href='http://en.wikipedia.org/wiki/Hyperdub' target='_blank'>Wikipedia</a>",
 	
 	links:[
+		["Music: Burial - Dog Shelter","http://www.hyperdub.net/artists/view/Burial"],
 		["Website","http://www.hyperdub.net/"],
 	],	
 	
 	
 	children:[
-		burial,
+		
 		kingMidasSound_clashnBurn,
-		kode9_distantLightsRemix
+		kode9_distantLightsRemix,
+		burial_roughSleeper,
+		burial_archangel,
+		burial_raver
 
 	]
 }
@@ -384,6 +321,7 @@ var ninjaTune = {
 var england ={
 		file:"burial_gutted.mp3",
 		title:"England",
+		img:"img/galaxies/europe/britain/england/england.png",
 		links:[
 			["Music: Burial - Gutted","http://www.hyperdub.net/artists/view/Burial"],
 		
@@ -790,7 +728,7 @@ guiBoratto_annuciacion ={
 }
 
 kompakt = {
-	file:"guiBorrato_arquipelago.mp3",
+	file:"guiBoratto_arquipelago.mp3",
 	title:"Kompakt",
 	img:"img/galaxies/europe/germany/kompakt.png",
 	info:"Kompakt is a Cologne-based electronic music record label and vinyl/CD distributor, owned by Wolfgang Voigt, Michael Mayer and Jürgen Paape. They specialize in microhouse and minimal techno, and are known for their Total compilation series which reached its eleventh installment in 2010.<br/><br/>Kompakt originated from a techno record store that was opened in Cologne in 1993 (under the name 'Delirium') by Wolfgang Voigt, Reinhard Voigt, Jörg Burger and Jürgen Paape, who were soon joined by Michael Mayer. Kompakt itself was formally founded in 1998, combining several existing labels, the record store and distributor and also event organizing activities.<br/><br/>According to Grooves magazine, 'Kompakt's chief aesthetic objective has always been the perfect marriage of ambient texture and linear 4x4 structure—blending deep, granular sound design with the 4-bar rhythmic intensity and patterning that makes house and techno so club-effective'.Kompakt has been noted for releases enriching abstract techno tracks with pop elements such as vocals - Mayer has stated that 'We grew up with pop music and really like traces of pop in techno music. This is probably Kompakt's biggest strength-- that we can detect these pop traces and give them a home'. British music critic Simon Reynolds has characterized Kompakt as the 'label that's contributed more than any other to Germany's dominance of electronic dance music this decade [the 2000s]'.<br/><br/>From <a href='http://en.wikipedia.org/wiki/Kompakt' target='_blank'>Wikipedia</a>",	
@@ -1006,18 +944,17 @@ NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMER
 		
 		
 		var dublab = {
-			position:{
-				x:-20000,
-				y:-20000,
-				z:0
-			},
+			
 			
 			
 			title:"dublab",
-			file:"austinPeralta_epilogueRenaissanceBubbles.mp3",
+			file:"adventureTime_setOnSatellites.mp3",
 			info:"dublab is a non-profit web radio collective devoted to the growth of  positive music, arts and culture. We have been broadcasting independently since 1999. Our audience of turned-on listeners connect from around the world. dublab's mission is to share beautiful music via the world's best djs. What you hear on dublab crosses genres and defies classification. Unlike traditional radio, the dublab djs have total freedom of selection. You will experience many different sounds, but find they all have the same soulful root. We have extended our creative action to include art exhibits, film projects, event production and record releases.<br/><br/>A collective of the planet's most progressive music selectors. Whether bringing dance floors to a boil, exploring magic experimentalism or spinning far-out, eclectic sets the dublab soundsystem reflects all shades of future roots sound.",	
 			img:"img/galaxies/laGalaxy/dublab/clusterLogo.png",
-			links:[["dublab","http://dublab.com/"]],
+			links:[
+				["Music: Adventure Time - Set On Satellites","http://dublab.com/"],
+				["dublab","http://dublab.com/"]
+			],
 			
 			
 			
@@ -1059,9 +996,12 @@ NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMER
 			
 			
 			title:"Brainfeeder",
-			file:"austinPeralta_epilogueRenaissanceBubbles.mp3",
+			file:"teebs_jahara.mp3",
 			info : "Brainfeeder is an independent record label based in Los Angeles, California, founded by Flying Lotus in 2008, focusing on electronic music and instrumental hip hop. It has signed artists such as Flying Lotus, Daedelus, Lorn, Ras G, Samiyam, The Gaslamp Killer, Austin Peralta, Thundercat, Mono/Poly, Teebs, Martyn, Lapalux, Strangeloop, Taylor McFerrin, Jeremiah Jae and Tokimonsta.",
-			links:[["Brainfeeder Website","http://brainfeedersite.com"]],
+			links:[
+				["Music: Teebs - Jahara","https://soundcloud.com/teebsio"],
+				["Brainfeeder Website","http://brainfeedersite.com"]
+			],
 
 			radius:10000,
 			
@@ -1102,11 +1042,7 @@ NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMER
 		
 		
 		var fof = {
-			position:{
-				x:20000,
-				y:20000,
-				z:0
-			},
+			
 			
 			
 			title:"Friends of Friends",
@@ -1114,8 +1050,8 @@ NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMER
 			info:"While the music industry is getting a much needed make-over, for fans there lies a fresh opportunity to change the way we value and understand music as a whole. The Internet in many ways has been 'the great equalizer' for both artists and music fans giving us all new opportunities to release, buy and receive music. Artists are able to reach new listeners with ease, while interested fans have plenty of avenues to express their own voices online and discover something new. And while people aren't buying music at the stores at the same rate as in the past, they certainly are willing to support the people that make art they love. Fans still want something tangible and by evidence of current blog/Twitter culture, are seeming just as interested in the story and method as they are in the final product.<br/><br/>Thus leads way to the introduction of a new type of label called FoF Music (Friends of Friends), the name itself is the driving force behind the label and website, referring to the most effective way (yet traditional way!) people learn about new music: through Friends! The hope is to help re-invent how music is released in a way that is not only more involving for the artist (A&R, artwork, marketing) but more importantly truly enticing for the fans. We want to create releases that are inspiring for artists and fans alike; with the intention to create a product that is not a useless plastic memory holder but rather is worth the hard earned money spent to create and purchase.<br/><br/>Be on the lookout for the goodies to come via FoF Music!",
 			img:"img/galaxies/laGalaxy/fof/clusterLogo.png",
 			links:[
+				["Music: Pcoat - Division","http://www.facebook.com/pcoatpcoat"],
 				["Friends Of Friends Website","http://www.fofmusic.net/"],
-				["Bandcamp","http://fofmusic.bandcamp.com/"]	
 			],
 			
 			 
@@ -1201,21 +1137,15 @@ NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMER
 		
 		
 		var hitRun = {
-			position:{
-				x:0,
-				y:0,
-				z:30000,
-				
-			},
+			
 			
 			title:"Hit + Run",
 			img:"img/galaxies/laGalaxy/hitRun/clusterLogo.png",
-			file:"austinPeralta_epilogueRenaissanceBubbles.mp3",
-			info: "HIT + RUN, the world's leader in live screenprinting, was created in 2005 by Southern California artists Brandy Flower and Mike Crivello. A product of the contagious enthusiasm they had seen at small silkscreening parties in their homes, HIT + RUN's live screenprinting events quickly grew, and today the Crew can be found at everything from Coachella, to the Super Bowl, to Art Basel, SXSW and more.<br/><br/>At each HIT + RUN event, Flower and Crivello act as curators, selecting from their network of artists to create an exclusive, one-of-kind art experience for all types of events.",
+			file:"kutmah_killAllBankers.mp3",
+			info: "Can't get better the HIT + RUN",
 			links:[
+				["Music: Kutmah - Kill All Bankers","http://www.kutmah.com/"],
 				["Hit and Run Website","http://thehitandrun.com/"],
-				["Soundcloud","https://soundcloud.com/hit-run"],
-				["Bandcamp","http://thehitandrun.bandcamp.com/"],
 			],
 				
 			dust:{
@@ -1260,8 +1190,7 @@ NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMERICA NORTH AMER
 				img:"img/galaxies/laGalaxy/laLogo.png",
 				
 				links:[
-					["New York Times","http://www.nytimes.com/2010/05/30/arts/music/30lotus.html?pagewanted=all&_r=0"],
-					["LA Weekly","http://www.laweekly.com/2011-11-03/music/low-end-theory-anniversary/"]
+					["Music: Teebs - Gratitude","http://soundcloud.com/teebsio"]
 				],
 				
 				
@@ -1353,6 +1282,7 @@ hollyHerndon_controlAnd ={
 
 rvng={
 	file:"hollyHerndon_fade.mp3",
+	title:"RVNG INTL",
 	img:"img/galaxies/northAmerica/ny/rvng.png",
 	info:"It's Revenge without the E's, folks (Dave P ate 'em all the last time in Berlin). Rvng was never meant for what it was originally intended but was always meant well . Or at least to serve as some blaring distraction from what they told us was cool. We don't intend to tell you what's cool 'cus we have no fucking idea. We have friends we support by releasing records and throwing parties every now and again. You're likely to be one 'em if you live outside of this screen and participate in a bigger, radder world. It's ours for the taking, friends. It's ours for Rvng.<br/><br/>From <a href='http://www.igetrvng.com/info/' target='_blank'>RVNG INTL</a>",
 	
@@ -1411,6 +1341,7 @@ ezekielHonig_betweenBridges={
 
 ny={
 	file:"hollyHerndon_movement.mp3",
+	title:"New York",
 	img:"img/galaxies/northAmerica/ny/ny.png",
 	children:[
 		rvng,
@@ -1541,6 +1472,7 @@ bieber_beautyAndABeat={
 
 canada={
 	file:"theWeeknd_initiation.mp3",
+	title:"Canada",
 	img:"img/galaxies/northAmerica/canada/canada.png",
 	children:[
 		bieber_beautyAndABeat,
@@ -1587,9 +1519,9 @@ var matiasAguayo_rollerskate={
 	]
 	
 }
-var guiBorrato_beautifulLife ={
+var guiBoratto_beautifulLife ={
 	img:"img/galaxies/southAmerica/chromophobia.png",
-	file:"guiBorrato_beautifulLife.mp3",
+	file:"guiBoratto_beautifulLife.mp3",
 	info:"Gui Boratto (born 1974 in São Paulo) is a Brazilian electronic music producer. In the 1990s he was a member of Sect.<br/><br/>His album Chromophobia was awarded the title of Mixmag Album of the Month. Regarding why he chose the name Chromophobia, Boratto said: 'The same meaning as monochromatism in architecture, which means simplicity. That's all. I don't have a morbid fear of colors at all. But also, I was ironic. My music is really colorful.'<br/><br/>From <a href='http://en.wikipedia.org/wiki/Gui_Boratto' target='_blank'>Wikipedia</a>",
 	links:[
 		["Site","http://www.guiboratto.com.br/"]
@@ -1672,6 +1604,12 @@ var bunkaiKei ={
 	title:"Bunkai - Kei Records",
 	img:"img/galaxies/asia/bunkaiKei.png",
 	info:"In the degradation system is regarded as a product of communication rather than a single media works. Because it consists considered as 'work' for the first time to create people who receive it, and bring people, all of these people exist. I would like to hope degradation system in place where you can always outgoing communication between the product of the artist. Where we will create a piece of work people who create content music, video, pictures, text, etc ... various space interact in other words. Such collaboration is also part of the communication. I was born from the desire that the degradation system, you get used to the medium in a form that can provide the best 'work' did so.<br/><br/> From <a href='http://bunkai-kei.com/' target='_blank'>Bunkai - Kei (using google translate)</a>",
+	children:[
+		nil_monotone,
+		qGhost_fildaeMorph,
+		madegg_miragesPt2,
+		emufucka_prygon
+	],
 	links:[
 		["Website","http://bunkai-kei.com/"],
 		["Music: Sinus - Phasma","http://bunkai-kei.com/"]
@@ -1840,7 +1778,8 @@ MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN 
 
 
 var europe={
-	file:"kendrickLamar_theArtOfPeerPressure.mp3",
+	file:"burial_stolenDog.mp3",
+	img:"img/4c5bf2.png",
 	title:"Europe",
 	
 	children:[
@@ -1848,45 +1787,25 @@ var europe={
 		germany,
 		france,
 		spain,
-		britain
+		scotland,
+		england
 	
 	],
+	
+	color:0xaaaaaa,
 	
 	links:[
-		["Music: Kendrick Lamar - The Art Of Peer Pressure","http://kendricklamar.org/"]
+		["Music: Burial - Stolen Dog","http://www.hyperdub.net/artists/view/Burial"]
 	],
 	
 	
-	 //particle system for the galaxy
-	  dust:{
-		  pNum:200,
-		  fNum:20,
-		  pPosition: dustLib.pPosition.randomBox(100000),
-		  pMaterial: dustLib.pMaterial.colorAdditive(0xc0ffee,1000),
-		  fPosition: dustLib.fPosition.randomBox(500000),
-		  fRotation: dustLib.fRotation.noRotation(),
-	  },
-	  
-	  sections:[
-		  {	
-		  
-			  dust:{
-				  rotation:dustLib.visual.rotation.freqX,
-				  scale:dustLib.visual.scale.freqXYZ
-			  },
-			  
-			  //Time when the first section comes in
-			  time:0
-		  },
-	  
-	  ],
 	  
 	  radius:400000,
 	  
 	  position:{
 		  x:0,
 		  y:0,
-		  z:-1000000,
+		  z:-2000000,
 
 	  }
 	
@@ -1895,7 +1814,9 @@ var europe={
 }
 
 var northAmerica={
+	
 	file:"kendrickLamar_theArtOfPeerPressure.mp3",
+	img:"img/4c5bf2.png",
 	title:"North America",
 	
 	children:[
@@ -1910,37 +1831,15 @@ var northAmerica={
 		["Music: Kendrick Lamar - The Art Of Peer Pressure","http://kendricklamar.org/"]
 	],
 	
+	color:0xaaaa88,
 	
-	 //particle system for the galaxy
-	  dust:{
-		  pNum:200,
-		  fNum:20,
-		  pPosition: dustLib.pPosition.randomBox(100000),
-		  pMaterial: dustLib.pMaterial.colorAdditive(0xc0ffee,1000),
-		  fPosition: dustLib.fPosition.randomBox(500000),
-		  fRotation: dustLib.fRotation.noRotation(),
-	  },
-	  
-	  sections:[
-		  {	
-		  
-			  dust:{
-				  rotation:dustLib.visual.rotation.freqX,
-				  scale:dustLib.visual.scale.freqXYZ
-			  },
-			  
-			  //Time when the first section comes in
-			  time:0
-		  },
-	  
-	  ],
-	  
+	
 	  radius:500000,
 	  
 	  position:{
 		  x:0,
 		  y:0,
-		  z:1000000,
+		  z:2000000,
 
 	  }
 	
@@ -1950,49 +1849,28 @@ var northAmerica={
 
 var southAmerica = {
 	file:"ricardoVillalobos_timemorf.mp3",
-	img:"img/hoverCube.png",
+	img:"img/4c5bf2.png",
 	title:"South America",
 	links:[
 		["Music: Ricardo Villalobos - Timemorf","http://en.wikipedia.org/wiki/Ricardo_Villalobos"]
 	],
+	
+	color:0xaa11aa,
 	children:[
 		matiasAguayo_minimal,
 		matiasAguayo_rollerskate,
-		guiBorrato_beautifulLife,
+		guiBoratto_beautifulLife,
 		ricardoVillalobos_whatYouSay,	
 		nicolasJaar_colomb,
 		nicolasJaar_spaceIsOnlyNoise
 	],
 	
-	 //particle system for the galaxy
-	  dust:{
-		  pNum:200,
-		  fNum:20,
-		  pPosition: dustLib.pPosition.randomBox(100000),
-		  pMaterial: dustLib.pMaterial.colorAdditive(0xc0ffee,1000),
-		  fPosition: dustLib.fPosition.randomBox(500000),
-		  fRotation: dustLib.fRotation.noRotation(),
-	  },
-	  
-	  sections:[
-		  {	
-		  
-			  dust:{
-				  rotation:dustLib.visual.rotation.freqX,
-				  scale:dustLib.visual.scale.freqXYZ
-			  },
-			  
-			  //Time when the first section comes in
-			  time:0
-		  },
-	  
-	  ],
 	  
 	  radius:400000,
 	  
 	  position:{
 		  x:0,
-		  y:-1000000,
+		  y:-2000000,
 		  z:0,
 	  }
 	
@@ -2002,7 +1880,7 @@ var southAmerica = {
 var asia={
 	file:"geinoh_mutation.mp3",
 	title:"Asia",
-	 img:"img/hoverCube.png",
+	 img:"img/33c8fb.png",
 	
 	links:[
 		["Music: Geinoh Yamashirogumi - Mutation","http://en.wikipedia.org/wiki/Geinoh_Yamashirogumi"]
@@ -2014,36 +1892,14 @@ var asia={
 		kyaryPamyuPamyu_ponPonPon	
 	],
 	
-	
-	 //particle system for the galaxy
-	  dust:{
-		  pNum:200,
-		  fNum:20,
-		  pPosition: dustLib.pPosition.randomBox(100000),
-		  pMaterial: dustLib.pMaterial.colorAdditive(0xc0ffee,1000),
-		  fPosition: dustLib.fPosition.randomBox(500000),
-		  fRotation: dustLib.fRotation.noRotation(),
-	  },
-	  
-	  sections:[
-		  {	
-		  
-			  dust:{
-				  rotation:dustLib.visual.rotation.freqX,
-				  scale:dustLib.visual.scale.freqXYZ
-			  },
-			  
-			  //Time when the first section comes in
-			  time:0
-		  },
-	  
-	  ],
+	color:0x1d7373,
+	 
 	  
 	  radius:400000,
 	  
 	  position:{
 		  x:0,
-		  y:1000000,
+		  y:2000000,
 		  z:0,
 	  }
 }
@@ -2056,7 +1912,7 @@ var oceania = {
 	  info:"Including Australia, Indonesia, and other members of the oceanic continent, this is one of the areas of the Universe of Sound that has the most potential for growth. If you know of beautiful beats or majestic melodies that come from Oceania, send them to @cabbibo, and they could be added to this universe",
 	  title:"Oceania",
 	  file:"taKu_ladiesNight.mp3",
-	  img:"img/hoverCube.png",
+	  img:"img/887aff.png",
 	  links:[
 		  ["Music: Ta-ku 'Ladies Night' ","https://soundcloud.com/takugotbeats"]  	  
 	  ],
@@ -2070,35 +1926,13 @@ var oceania = {
 		  taKu_wildOut,
 		  midnightRunners_highCityExpress
 	  ],
-	  
-	  //particle system for the galaxy
-	  dust:{
-		  pNum:200,
-		  fNum:20,
-		  pPosition: dustLib.pPosition.randomBox(100000),
-		  pMaterial: dustLib.pMaterial.colorAdditive(0xc0ffee,1000),
-		  fPosition: dustLib.fPosition.randomBox(500000),
-		  fRotation: dustLib.fRotation.noRotation(),
-	  },
-	  
-	  sections:[
-		  {	
-		  
-			  dust:{
-				  rotation:dustLib.visual.rotation.freqX,
-				  scale:dustLib.visual.scale.freqXYZ
-			  },
-			  
-			  //Time when the first section comes in
-			  time:0
-		  },
-	  
-	  ],
+	
+	 
 	  
 	  radius:500000,
 	  
 	  position:{
-		  x:-1000000,
+		  x:-2000000,
 		  y:0,
 		  z:0,
 	  }
@@ -2122,34 +1956,15 @@ var africa = {
 		  shangaan_Electro
 	  ],
 	  
-	  //particle system for the galaxy
-	  dust:{
-		  pNum:200,
-		  fNum:20,
-		  pPosition: dustLib.pPosition.randomBox(100000),
-		  pMaterial: dustLib.pMaterial.colorAdditive(0xddaa99,1000),
-		  fPosition: dustLib.fPosition.randomBox(500000),
-		  fRotation: dustLib.fRotation.noRotation(),
-	  },
-	  
-	  sections:[
-		  {	
-		  
-			  dust:{
-				  rotation:dustLib.visual.rotation.freqX,
-				  scale:dustLib.visual.scale.freqXYZ
-			  },
-			  
-			  //Time when the first section comes in
-			  time:0
-		  },
-	  
+	  links:[
+	  	["Music: Tinariwen - Assouf","http://www.tinariwen.com/"]
 	  ],
 	  
+	 
 	  radius:500000,
 	  
 	  position:{
-		  x:1000000,
+		  x:2000000,
 		  y:0,
 		  z:0,
 	  }
@@ -2158,23 +1973,103 @@ var africa = {
 
 
 
+var secretVerse = {
+			file:"cabbibo_belieber.mp3",
+			info:"I soak it all in, you know.",
+			links:[
+				["Soundcloud","http://soundcloud.com/cabbibo"]
+				
+			],
+			
+				
+	//The Planets for this solar system
+	planets:{
+		numOf:50,
+		type:planetLib.type.sphere(100,15,15),
+		dataType:planetLib.type.sphere(100,15,15),
+		material:planetLib.material.normal(),
+		position:planetLib.position.fullCircle(500,50),
+		rotation:planetLib.rotation.fullCircleZ(50),	
+	},
+	
+	
+	//the Sun for this solar system
+	suns:{
+		numOf:20,
+		type:planetLib.type.icosahedron(20000,1),
+		dataType:planetLib.type.icosahedron(20000,1),
+		material:planetLib.material.normal(),
+		position:planetLib.position.center(),
+		rotation:planetLib.rotation.fullCircle(20),	
+	},
+	
+	dust:{
+		pNum:40,
+		fNum:40,
+		pMaterial:dustLib.pMaterial.colorAdditive(0xaaaaaa,10),
+		pPosition:dustLib.pPosition.ringX(30000,40),
+		fPosition:dustLib.fPosition.center(),
+		fRotation:dustLib.fRotation.noRotation()
+		
+	},
+	
+	
+	
+	//SECTIONS
+	sections:[
+		{	
+			//vis of First Section!
+			sun:{
+				vertex:sunLib.visual.vertex.hackNight2
+			},
+			planet:{
+				vertex:planetLib.visual.vertex.hackNight6,
+				//rotation:planetLib.visual.rotation.freqXcamZ
+			},
+			dust:{
+				scale:dustLib.visual.scale.freqHalfLess_1,
+				size:dustLib.visual.size.freqNone,
+				rotation:dustLib.visual.rotation.nSteadyXNFreqZ
+			},
+
+			//Time when the first section comes in
+			time:0
+		},
+		
+		
+	],
+			
+			
+			secret:true,
+			radius:30000,
+			
+			position:{
+				x:0,
+				y:0,
+				z:8000000,
+			}
+		
+	}	
+		
 
 var uOS = {
 	
 				id:"Universe Of Sound",
 				info:"The Universe is Ever Expanding, but only with your help. Please <a href = 'mailto:contact@cabbibo.com' > Contact Me </a> to join in on the creation.",
-				title:"EÄ",
-				file:"theField_overTheIce.mp3",
-				img:"img/hoverCube.png",
+				title:"Universe Of Sound",
+				file:"holyOther_knowWhere.mp3",
+				img:"img/cabLogo.png",
 				links:[
+					["Music: Holy Other - Know Where","https://soundcloud.com/holyother"], 
 					["Cabbibo.com","http://cabbibo.com"]
 				],
 				
 				
 				theme:'random',
-				color:0xaaaaaa,
+				color:0x010000,
 				
 				children:[
+					secretVerse,
 					northAmerica,
 					europe,
 					southAmerica,
@@ -2182,10 +2077,20 @@ var uOS = {
 					africa,
 					oceania,
 				],
+				//The Planets for this solar system
+				planets:{
+					numOf:20,
+					type:planetLib.type.sphere(1000,15,15),
+					dataType:planetLib.type.sphere(1000,15,15),
+					material:planetLib.material.colorNormal(0x5c0c0c),
+					position:planetLib.position.fullCircle(200000,20),
+					rotation:planetLib.rotation.fullCircleY(20),
+					
+				},
 				
 				//particle system for the galaxy
 				dust:{
-					pNum:200,
+					pNum:20,
 					fNum:200,
 					pPosition: dustLib.pPosition.randomBox(10000000),
 					pMaterial: dustLib.pMaterial.colorAdditive(0xff0000,10000),
@@ -2200,6 +2105,10 @@ var uOS = {
 							rotation:dustLib.visual.rotation.freqX,
 							scale:dustLib.visual.scale.freqXYZ
 						},
+						planet:{
+							vertex:planetLib.visual.vertex.hackNight6,
+						//rotation:planetLib.visual.rotation.freqXcamZ
+						},
 						
 						//Time when the first section comes in
 						time:0
@@ -2207,7 +2116,7 @@ var uOS = {
 				
 				],
 				
-				radius:30000000,
+				radius:10000000,
 				
 				position:{
 					x:0,

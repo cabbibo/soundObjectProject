@@ -1,18 +1,53 @@
-// JavaScript Document
-
 
 
 /*
 
 	Prototype for sound object.
-	All
-
+	
+	This set object will contain all of the functions neccesary to manipulate itself,
+	including the  'Objects' that make is up
+	
+	A 'SOUNDOBJ' || 'SOUND OBJECT' is basically a song. This 'SOUNDOBJ' will have multiple
+	'objects' that are part of it, such as the planets, dust, lights and sun.
+	
+	Additionally a 'SOUNDOBJ' can have 'children' which are just the SOUNDOBJs that are 
+	part of its system
+	
+	Might be a bit convoluted of a naming process, but I've gotta stay object oriented :)
+	
+	
+	THINGS TO KEEP IN MIND:
+	
+		-   all of the 'scenes' of the different SOUNDOBJs will always be in place, the 'objects'
+			of the scene will be what are removed and replaced
+		
+		-   In order to keep all of the audio from buffering, the source of the audio must be 
+			destroyed and created every time the user enters the SOUNDOBJ
+		
+		
+	
 */
 
 SOUNDOBJ.prototype = {
 	
 	
+	/*
+		this snippet; 
+		
+		var newObj = this
+		if(whichObj){
+			newObj = whichObj	
+		}
+		
+		is used in various functions so that the
+		parent or child can be passed through
+		and become the new  object of focus
 	
+	*/
+	
+	
+	//Function to add Objects, making sure they are '!alive'
+	//then adding them to the scene, making them 'alive'
 	addObjects:function(whichObj){
 		var newObj = this
 		if(whichObj){
@@ -27,8 +62,9 @@ SOUNDOBJ.prototype = {
 		newObj.alive = true
 	},
 	
-		
+	//Opposite of adding objects	
 	removeObjects:function(whichObj){
+		
 		var newObj = this
 		if(whichObj){
 			newObj = whichObj	
@@ -44,9 +80,7 @@ SOUNDOBJ.prototype = {
 	},
 	
 	
-	//if we are calling the remove children of parent, 
-	//then need to pass it through,
-	//otherwise it will try to remove children of current object
+	//Adds all children of a scene
 	addChildren:function(whichObj){
 		
 		var newObj = this
@@ -55,13 +89,9 @@ SOUNDOBJ.prototype = {
 		}
 		
 		for(var i = 0; i<newObj.children.length;i++){
-			newObj.children[i].addObjects(newObj.children[i]);
-			
-			//makes sure that the childrens audio has stopped
-			//hackish...
-			//console.log(newObj.children[i].audio)
-			//newObj.children[i].audio.stop()			
+			newObj.children[i].addObjects(newObj.children[i]);		
 		}
+		
 	},
 	
 	removeChildren:function(whichObj){
@@ -104,87 +134,76 @@ SOUNDOBJ.prototype = {
 	enter:function(whichObj){
 	
 		var newObj = this
-		
 		if(whichObj){
 			newObj = whichObj	
 		}
 		
+		
+		
+		//Makes sure no other audio is playing
 		newObj.checkAudio()
-		//TODO 
-		//WRAP in fading / scaling functions
-		//also do for exit function
 		
 		//Audio
-	
 		newObj.audio.start()
 		
 		
-		
-	
 		//TravelLog / Blog
 		newObj.addToTravelLog()
 		newObj.addBlogInfo()
 		
-		/*
+		camera.far  = newObj.radius*10
+		camera.near = newObj.radius/1000
+		camera.updateProjectionMatrix();
 		
-			changes camera acceleration / deceleration based on galaxy size
-			also stops camera, so that you are forced to decide if you want to keep moving
-			and can't overshoot galaxies
-			
-			TODO: move camera closer to the center of the scene to prevent
-			the 'bug' where the user is stopped on the edge of an object 
-			and only sees the color, not the scene. 
-		
-				-This is gonna have to a bit more complex, because when exiting the world, 
-				will need to move away from the center of the soundObj it is exiting, but NOT
-				towards the center of the soundObj it is moving out of !
-		*/
 		//controls.movementSpeed = newObj.radius/1000
 		if(newObj.parent){
-		controls.maxSpeed = newObj.radius/5
-		controls.acceleration = newObj.radius/500
 		
+		//changes controls for the leap (or non leap)
+		if(leapControls ==false){
+			controls.maxSpeed = newObj.radius/5
+			controls.acceleration = newObj.radius/500
+		}else{
+			controls.maxSpeed = newObj.radius/5
+			controls.acceleration = newObj.radius/500
+			
+		}
 		//First Attempt at 'Z Fighting' by dynamically changing near and far
 		
-		camera.far  = newObj.radius*3
-		camera.near = newObj.radius/100
-		camera.updateProjectionMatrix();
-		console.log(camera)		
-
+	
 		//If we are in the ultimate universe
 		//make movement much slower, so that its harder to reach the secret level
 		}else{
-			controls.maxSpeed = newObj.radius/20
-			controls.acceleration = newObj.radius/1000
+			
+			//changes controls for the leap (or non leap)
+			if(leapControls ==false){
+				controls.maxSpeed = newObj.radius/20
+				controls.acceleration = newObj.radius/1000
+			}else{
+				controls.maxSpeed = newObj.radius/5
+				controls.acceleration = newObj.radius/50000
+			}
 		}
 		
 		
 		if(newObj.parent){
-			//removes all the objects 
+			
+			//removes all the objects of the parents
+			//as well as the parents children
 			newObj.parent.removeObjects(newObj.parent)
 			for(var i=0; i < newObj.parent.children.length; i++){
 				if(newObj.parent.children[i] != newObj){
 					newObj.parent.children[i].removeObjects(newObj.parent.children[i])
 				}
 			}
-			newObj.removeChildren(newObj.parent)
-			//then adds this one back in
+			
 			newObj.addObjects()
-			/*
-			if(newObj.parent.audio.stop()){
-				console.log('STOP CALLSSA')
-				console.log(newObj.parent.audio)
-				newObj.parent.audio.stop()
-				console.log(newObj.parent.audio)
-			}*/
+			
 		}else{
 			newObj.addObjects()
 		}
 		
 		
 		if(newObj.children){
-			
-			
 			newObj.addChildren()
 		}
 		
@@ -196,26 +215,16 @@ SOUNDOBJ.prototype = {
 	//function to be called when area is left (and parent entered)
 	exit:function(whereToEnter){
 		
-		
-		//this.audio.stop()	
-		/*if(this.audio.audio!=null){
-			
-			this.audio.stop()	
-		}else{
-			console.log('audio destroyed')	
-		}*/
-		
+	
 		//If this one has a parent, exit to it
 		if(this.parent){
 			//remove all the children of this level
 			if(this.children){
 				this.removeChildren()
 			}
+
 			//The only way that exit will be called is if it enters its parent
-			
-			//remove all of the objects of this level 
-			
-			
+
 			//If there is somewhere specific to enter, enter that region
 			if(whereToEnter){
 				
@@ -267,9 +276,9 @@ SOUNDOBJ.prototype = {
 		if(this.children){
 			this.checkChildren()
 		}
-		//if(this.parent){
+	
 		this.checkExit()
-		//}
+		
 	},
 	
 	
@@ -280,16 +289,33 @@ SOUNDOBJ.prototype = {
 		}
 	},
 	
+	
+	
+	/*
+	
+		THESE SECTIONS NEED WORK!
+	
+		specifically, they will be the sections we use in order to make the transitions between scenes
+		'smooth', right now this is done by 'scaling' scenes, as well as assigning 'opacity' to the parent scenes objects
+		the issue is that 'opacity' needs to go to 1, no matter what! even when a user uses the travel log...
+	
+	*/
+	
 	checkEnter:function(){
 		this.getPosToCamera()
 		
 		
 		//NEED TO MAKE SURE THAT SCALE ALWAYS GOES TO 1 ! 
-	/*
-		if(this.posToCamera.d < (this.radius +this.radius/2)){
+	
+		if(this.posToCamera.d < (this.radius +this.radius/4)){
 			
 			//gets a value between 1 & 0 to determine the radius
-			var opacity = (this.posToCamera.d-this.radius)/(this.radius/2)
+			var opacity = (this.posToCamera.d-this.radius)/(this.radius/4)
+			
+			if(opacity >=.9){
+				opacity = 1 - 0.001
+			}
+			
 			
 			//scene.fog.density = .00001/opacity
 			
@@ -297,7 +323,7 @@ SOUNDOBJ.prototype = {
 				
 				//Fades Out objects in parent area
 				for(var propt in this.parent.objects){
-					if(propt != 'lights' && propt != 'dust'){
+					if(propt != 'lights' ){
    						this.parent.objects[propt].array[0].material.opacity = opacity
 						
 					}
@@ -326,7 +352,7 @@ SOUNDOBJ.prototype = {
 			
 			
 		}
-	*/
+	//*/
 		
 		
 		if(this.posToCamera.d < this.radius){
@@ -337,10 +363,15 @@ SOUNDOBJ.prototype = {
 	checkExit:function(){
 		
 		
-		/*
+		
 		//NEED TO MAKE SURE SCALE ALWAYS GOES TO 1 !
 		if(this.posToCamera.d > this.radius-(this.radius/4)){
-			var opacity = (this.radius-this.posToCamera.d)/(this.radius/8)
+			var opacity = (this.radius-this.posToCamera.d)/(this.radius/4)
+			
+			if(opacity >=.9){
+				opacity = 1 - 0.001
+			}
+			
 			
 			if(this.children){
 				for(var i = 0; i <this.children.length ; i++){
@@ -355,27 +386,34 @@ SOUNDOBJ.prototype = {
 			
 			gain.gain.value = 0.5 * opacity
 		}
-		*/
-		
+	
+				
 
 		if(this.posToCamera.d > this.radius){
+			
+			// the below if statment is to take users to a 'secret' level
+			// which has not been fully implemented yet,
+			// but will probably be credits, or something of the sort
 			if(this.parent){
-				if(!this.params.secret){
+				//if(!this.params.secret){
 				this.exit()	
-				}else{
-					console.log('secret called')
-					camera.position.x = this.parent.scene.position.x
-					camera.position.y = this.parent.scene.position.y	
-					camera.position.z = this.parent.scene.position.z
+				/*}else{
+					camera.position.x = 6000000
+					camera.position.y = 0
+					camera.position.z = 0
 					this.exit()		
-				}
+				}*/
 			}else{
-				console.log('secret Called')
+				
 				controls.movementSpeed = 0
-				secretEnter = this.children[1]
-				camera.position.x = secretEnter.scene.position.x
-				camera.position.y = secretEnter.scene.position.y
-				camera.position.z = secretEnter.scene.position.z
+				secretEnter = this.children[0]
+				camera.position.x = secretEnter.scene.position.x+(controls.forward.x*(secretEnter.radius*2))
+				camera.position.y = secretEnter.scene.position.y+(controls.forward.y*(secretEnter.radius*2))
+				camera.position.z = secretEnter.scene.position.z+(controls.forward.z*(secretEnter.radius*2))
+				
+				camera.lookAt(secretEnter.scene.position)
+				
+			
 			}
 		}
 	
@@ -396,11 +434,12 @@ SOUNDOBJ.prototype = {
 			(this.posToCamera.z*this.posToCamera.z)
 		)
 		
+		
+		//Used for some of the visuals
 		var polar  = cabMATH.toPolar(this.posToCamera.x,this.posToCamera.y,this.posToCamera.z)
 		this.posToCamera.r = polar.r
 		this.posToCamera.t = polar.t
 		this.posToCamera.p = polar.p
-		
 	},
 	
 	
@@ -440,10 +479,9 @@ SOUNDOBJ.prototype = {
 		var linkAddFunction = function(){
 			
 			//hacking a bit, so you don't arrive right in the center,
-			//may not be neccesary though..
-			var newX= self.globalPos.x //+ ((Math.random()*self.radius)/20 - self.radius/40)
-			var newY= self.globalPos.y //+ ((Math.random()*self.radius)/20 - self.radius/40)
-			var newZ= self.globalPos.z //+ ((Math.random()*self.radius)/20 - self.radius/40)
+			var newX= self.globalPos.x + ((Math.random()*self.radius)/20 - self.radius/40)
+			var newY= self.globalPos.y + ((Math.random()*self.radius)/20 - self.radius/40)
+			var newZ= self.globalPos.z + ((Math.random()*self.radius)/20 - self.radius/40)
 		
 			var functionToReturn = "moveToLocation("+newX+","+newY+","+newZ+")"
 		
@@ -519,6 +557,8 @@ SOUNDOBJ.prototype = {
 		this.info = this.params.info
 		this.img = this.params.img
 		this.links = this.params.links
+		this.color = new THREE.Color(this.params.color)
+		
 			
 		//Creates a scene for the cluster, that all of its children will be added to
 		this.scene = new THREE.Object3D();
@@ -533,18 +573,7 @@ SOUNDOBJ.prototype = {
 		}
 		
 		
-		/*
-		TESTING SQUARE TO CHECK CENTER OF EACH SCENE
-		
 	
-		var centerSquare = new THREE.Mesh(
-			new THREE.CubeGeometry(this.params.radius/100,this.params.radius/100,this.params.radius/100),
-			new THREE.MeshNormalMaterial({side:THREE.DoubleSide})
-		)
-		this.scene.add(centerSquare)
-		
-		*/
-		
 		//This will be boolean we will use to figure out if 
 		//objects are part of the scene or not (used so that objects will not be 'readded')
 		this.alive = false
@@ -552,11 +581,6 @@ SOUNDOBJ.prototype = {
 		this.radius = this.params.radius
 		
 		//gets global position
-		/*
-		var copyPosition = new THREE.Vector3(this.params.position.x,this.params.position.y,this.params.position.z)
-	
-		copyPosition.applyMatrix4( this.scene.matrixWorld );
-		*/
 		this.getGlobalPos(this, this.params.position);
 		
 		this.posToCamera = {}
@@ -685,9 +709,6 @@ SOUNDOBJ.prototype = {
 	},
 	
 	
-	/*
-		PLACING CHILDREN
-	*/
 	
 	//this gets called if the child doesn't have a position
 	placeChildren:function(i){
@@ -708,7 +729,7 @@ SOUNDOBJ.prototype = {
 	},
 
 	
-	
+	//Short function to parse file of a section into a title
 	createTitle:function(whichChild){
 		
 		var child = this.params.children[whichChild]
@@ -727,10 +748,10 @@ SOUNDOBJ.prototype = {
 
 
 
-//Usede to create new sound object
+//Used to create new sound object
 function SOUNDOBJ(){
-	//get the parent. If Ultimate Object, set as null / undefined
 	
+	//get the parent. If Ultimate Object, set as null / undefined
 	this.parent = arguments[0]
 	this.params = arguments[1]
 	this.init();
